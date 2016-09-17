@@ -8,8 +8,8 @@ namespace Cti.Seller.Common
 {
     public static class Security
     {
-        public const string SellerUser = "Cti.SellerUser";
+        public const string SellerUser = "SellerUser";
 
-        public const string SellerAdminRole = "Cti.SellerAdmin";
+        public const string SellerAdminRole = "SellerAdmin";
     }
 }

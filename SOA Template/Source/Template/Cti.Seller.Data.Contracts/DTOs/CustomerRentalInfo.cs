@@ -7,7 +7,7 @@ namespace Cti.Seller.Data.Contracts
 {
     public class CustomerRentalInfo
     {
-        public Account Customer { get; set; }
+        public Account Sele { get; set; }
         public Car Car { get; set; }
         public Rental Rental { get; set; }
     }

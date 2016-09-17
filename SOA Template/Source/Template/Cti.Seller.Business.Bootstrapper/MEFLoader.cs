@@ -13,7 +13,7 @@ namespace Cti.Seller.Business.Bootstrapper
         {
             AggregateCatalog catalog = new AggregateCatalog();
 
-            catalog.Catalogs.Add(new AssemblyCatalog(typeof(CarRentalEngine).Assembly));
+            catalog.Catalogs.Add(new AssemblyCatalog(typeof(SellersHubEngine).Assembly));
             catalog.Catalogs.Add(new AssemblyCatalog(typeof(AccountRepository).Assembly));
             
             CompositionContainer container = new CompositionContainer(catalog);

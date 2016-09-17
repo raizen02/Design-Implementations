@@ -15,3 +15,13 @@ E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\D
 E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Moq.xml
 E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.dll
 E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.pdb
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.dll
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.pdb
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\Castle.Core.dll
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\Moq.dll
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\Castle.Core.xml
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\bin\Debug\Moq.xml
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\obj\Debug\Cti.Seller.Data.Tests.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.dll
+E:\Software Development\Design-Implementations\SOA Template\ServiceTemplate\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.pdb

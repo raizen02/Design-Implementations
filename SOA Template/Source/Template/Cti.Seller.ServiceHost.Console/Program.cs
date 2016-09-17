@@ -18,7 +18,7 @@ namespace Cti.Seller.ServiceHost
         static void Main(string[] args)
         {
             GenericPrincipal principal = new GenericPrincipal(
-                new GenericIdentity("Miguel"), new string[] { "Administrators", "Cti.SellerAdmin" });
+                new GenericIdentity("root"), new string[] { "Administrators", "SellerAdmin" });
             Thread.CurrentPrincipal = principal;
 
             ObjectBase.Container = MEFLoader.Init();
@@ -26,51 +26,50 @@ namespace Cti.Seller.ServiceHost
             Console.WriteLine("Starting up services...");
             Console.WriteLine("");
 
-            SM.ServiceHost hostInventoryManager = new SM.ServiceHost(typeof(InventoryManager));
-            SM.ServiceHost hostRentalManager = new SM.ServiceHost(typeof(RentalManager));
+            SM.ServiceHost hostUnitInventoryManager = new SM.ServiceHost(typeof(UnitInventoryManager));
             SM.ServiceHost hostAccountManager = new SM.ServiceHost(typeof(AccountManager));
 
-            StartService(hostInventoryManager, "InventoryManager");
-            StartService(hostRentalManager, "RentalManager");
+            StartService(hostUnitInventoryManager, "UnitInventoryManager");
             StartService(hostAccountManager, "AccountManager");
 
-            System.Timers.Timer timer = new System.Timers.Timer(10000);
-            timer.Elapsed += OnTimerElapsed;
-            timer.Start();
 
-            Console.WriteLine("Reservation monitor started.");
+            //Backend Job Sample Implementations
+            //System.Timers.Timer timer = new System.Timers.Timer(10000);
+            //timer.Elapsed += OnTimerElapsed;
+            //timer.Start();
+
+            //Console.WriteLine("Backend Job started.");
 
             Console.WriteLine("");
             Console.WriteLine("Press [Enter] to exit.");
             Console.ReadLine();
             Console.WriteLine("");
 
-            timer.Stop();
+            //timer.Stop();
 
-            Console.WriteLine("Reservaton mointor stopped.");
+            //Console.WriteLine("Backend Job Ended.");
 
-            StopService(hostInventoryManager, "InventoryManager");
-            StopService(hostRentalManager, "RentalManager");
+            StopService(hostUnitInventoryManager, "UnitInventoryManager");
             StopService(hostAccountManager, "AccountManager");
         }
 
-        static void OnTimerElapsed(object sender, ElapsedEventArgs e)
-        {
-            RentalManager rentalManager = new RentalManager();
+        //static void OnTimerElapsed(object sender, ElapsedEventArgs e)
+        //{
+        //    UnitInventoryManager inventoryManager = new UnitInventoryManager();
 
-            Reservation[] reservations = rentalManager.GetDeadReservations();
-            if (reservations != null)
-            {
-                foreach (Reservation reservation in reservations)
-                {
-                    using (TransactionScope scope = new TransactionScope())
-                    {
-                        rentalManager.CancelReservation(reservation.ReservationId);
-                        scope.Complete();
-                    }
-                }
-            }
-        }
+        //    Unit[] reservations = UnitInventoryManager.ReserveUnit();
+        //    if (reservations != null)
+        //    {
+        //        foreach (Reservation reservation in reservations)
+        //        {
+        //            using (TransactionScope scope = new TransactionScope())
+        //            {
+        //                inventoryManager.CancelReservation(reservation.ReservationId);
+        //                scope.Complete();
+        //            }
+        //        }
+        //    }
+        //}
 
         static void StartService(SM.ServiceHost host, string serviceDescription)
         {

@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business Engines\CarRentalEngine.cs" />
+    <Compile Include="Business Engines\SellersHubEngine.cs" />
     <Compile Include="BusinessEngineFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -10,42 +10,17 @@ namespace Cti.Seller.ServiceHost.Tests
     public class ServiceAccessTests
     {
         [TestMethod]
-        public void test_inventory_manager_as_service()
+        public void test_unitInventory_manager_as_service()
         {
-            ChannelFactory<IInventoryService> channelFactory =
-                new ChannelFactory<IInventoryService>("");
+            ChannelFactory<IUnitInventoryService> channelFactory =
+                new ChannelFactory<IUnitInventoryService>("");
 
-            IInventoryService proxy = channelFactory.CreateChannel();
+            IUnitInventoryService proxy = channelFactory.CreateChannel();
 
             (proxy as ICommunicationObject).Open();
 
             channelFactory.Close();
         }
-
-        [TestMethod]
-        public void test_rental_manager_as_service()
-        {
-            ChannelFactory<IRentalService> channelFactory =
-                new ChannelFactory<IRentalService>("");
-
-            IRentalService proxy = channelFactory.CreateChannel();
-
-            (proxy as ICommunicationObject).Open();
-
-            channelFactory.Close();
-        }
-
-        [TestMethod]
-        public void test_account_manager_as_service()
-        {
-            ChannelFactory<IAccountService> channelFactory =
-                new ChannelFactory<IAccountService>("");
-
-            IAccountService proxy = channelFactory.CreateChannel();
-
-            (proxy as ICommunicationObject).Open();
-
-            channelFactory.Close();
-        }
+  
     }
 }

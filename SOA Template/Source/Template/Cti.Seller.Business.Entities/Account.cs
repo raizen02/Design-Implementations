@@ -35,10 +35,7 @@ namespace Cti.Seller.Business.Entities
         public string ZipCode { get; set; }
 
         [DataMember]
-        public string CreditCard { get; set; }
-
-        [DataMember]
-        public string ExpDate { get; set; }
+        public string ContactNo { get; set; }
 
         #region IIdentifiableEntity members
 

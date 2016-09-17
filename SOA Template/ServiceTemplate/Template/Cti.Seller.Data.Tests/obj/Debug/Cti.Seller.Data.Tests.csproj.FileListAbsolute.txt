@@ -1,0 +1,17 @@
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.pdb
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\Moq.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\Moq.pdb
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\bin\Debug\Moq.xml
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.pdb
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\CarRental.Data.Tests.pdb
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Castle.Core.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Moq.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Castle.Core.xml
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\bin\Debug\Moq.xml
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Data.Tests\obj\Debug\CarRental.Data.Tests.pdb

@@ -1,0 +1,4 @@
+E:\Software Development\SOA Template\Source\Core\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.dll
+E:\Software Development\SOA Template\Source\Core\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.pdb
+E:\Software Development\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
+E:\Software Development\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb

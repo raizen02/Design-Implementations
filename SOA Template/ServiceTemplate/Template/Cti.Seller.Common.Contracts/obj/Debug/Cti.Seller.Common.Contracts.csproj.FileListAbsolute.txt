@@ -1,0 +1,8 @@
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Common.Contracts\bin\Debug\CarRental.Common.Contracts.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Common.Contracts\bin\Debug\CarRental.Common.Contracts.pdb
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Common.Contracts\obj\Debug\CarRental.Common.Contracts.dll
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Common.Contracts\obj\Debug\CarRental.Common.Contracts.pdb
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Common.Contracts\bin\Debug\CarRental.Common.Contracts.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Common.Contracts\bin\Debug\CarRental.Common.Contracts.pdb
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Common.Contracts\obj\Debug\CarRental.Common.Contracts.dll
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Common.Contracts\obj\Debug\CarRental.Common.Contracts.pdb

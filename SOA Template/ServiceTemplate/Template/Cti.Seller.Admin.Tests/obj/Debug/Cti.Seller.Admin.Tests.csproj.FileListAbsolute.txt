@@ -1,0 +1,2 @@
+E:\Software Development\SOA Template\Source\CarRental\Cti.Seller.Admin.Tests\obj\Debug\Cti.Seller.Admin.Tests.csprojResolveAssemblyReference.cache
+E:\Software Development\SOA Template\Source\Template\Cti.Seller.Admin.Tests\obj\Debug\Cti.Seller.Admin.Tests.csprojResolveAssemblyReference.cache

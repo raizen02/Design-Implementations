@@ -9,7 +9,7 @@ namespace Cti.Seller.Client.Proxies.Tests
         [TestMethod]
         public void test_inventory_client_connection()
         {
-            InventoryClient proxy = new InventoryClient();
+            UnitInventoryClient proxy = new UnitInventoryClient();
 
             proxy.Open();
         }
@@ -22,12 +22,6 @@ namespace Cti.Seller.Client.Proxies.Tests
             proxy.Open();
         }
 
-        [TestMethod]
-        public void test_rental_client_connection()
-        {
-            RentalClient proxy = new RentalClient();
-
-            proxy.Open();
-        }
+       
     }
 }

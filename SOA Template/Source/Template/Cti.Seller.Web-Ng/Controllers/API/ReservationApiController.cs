@@ -21,7 +21,7 @@ namespace Cti.Seller.Web.Controllers.API
     public class ReservationApiController : ApiControllerBase
     {
         [ImportingConstructor]
-        public ReservationApiController(IInventoryService inventoryService, IRentalService rentalService)
+        public ReservationApiController(IUnitInventoryService inventoryService, IRentalService rentalService)
         {
             _InventoryService = inventoryService;
             _RentalService = rentalService;

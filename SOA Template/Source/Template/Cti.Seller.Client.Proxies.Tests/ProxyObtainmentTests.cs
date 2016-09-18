@@ -20,19 +20,19 @@ namespace Cti.Seller.Client.Proxies.Tests
         [TestMethod]
         public void obtain_proxy_from_container_using_service_contract()
         {
-            IInventoryService proxy 
-                = ObjectBase.Container.GetExportedValue<IInventoryService>();
+            IUnitInventoryService proxy 
+                = ObjectBase.Container.GetExportedValue<IUnitInventoryService>();
 
-            Assert.IsTrue(proxy is InventoryClient);
+            Assert.IsTrue(proxy is UnitInventoryClient);
         }
 
         [TestMethod]
         public void obtain_proxy_from_service_factory()
         {
             IServiceFactory factory = new ServiceFactory();
-            IInventoryService proxy = factory.CreateClient<IInventoryService>();
+            IUnitInventoryService proxy = factory.CreateClient<IUnitInventoryService>();
 
-            Assert.IsTrue(proxy is InventoryClient);
+            Assert.IsTrue(proxy is UnitInventoryClient);
         }
 
         [TestMethod]
@@ -41,9 +41,9 @@ namespace Cti.Seller.Client.Proxies.Tests
             IServiceFactory factory =
                 ObjectBase.Container.GetExportedValue<IServiceFactory>();
 
-            IInventoryService proxy = factory.CreateClient<IInventoryService>();
+            IUnitInventoryService proxy = factory.CreateClient<IUnitInventoryService>();
 
-            Assert.IsTrue(proxy is InventoryClient);
+            Assert.IsTrue(proxy is UnitInventoryClient);
         }
     }
 }

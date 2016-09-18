@@ -11,7 +11,7 @@ using Core.Common.Exceptions;
 namespace Cti.Seller.Client.Contracts
 {
     [ServiceContract]
-    public interface IUnitInventory : IServiceContract
+    public interface IUnitInventoryService : IServiceContract
     {
         [OperationContract]
         [TransactionFlow(TransactionFlowOption.Allowed)]

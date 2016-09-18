@@ -14,7 +14,7 @@ namespace Cti.Seller.Business.Contracts
         [OperationContract]
         [FaultContract(typeof(NotFoundException))]
         [FaultContract(typeof(AuthorizationValidationException))]
-        Unit[] GetAvailableUnits(Unit loginEmail);
+        Unit[] GetAvailableUnits(ProjectSearchParams searchParams);
 
     }
 }

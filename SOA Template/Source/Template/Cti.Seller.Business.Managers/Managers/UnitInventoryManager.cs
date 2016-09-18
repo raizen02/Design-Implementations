@@ -45,7 +45,10 @@ namespace Cti.Seller.Business.Managers
         [Import]
         IBusinessEngineFactory _BusinessEngineFactory;
 
-        public Unit[] GetAvailableUnits(Unit loginEmail)
+        [OperationBehavior(TransactionScopeRequired = true)]
+        //[PrincipalPermission(SecurityAction.Demand, Role = Security.SellerAdminRole)]
+        //[PrincipalPermission(SecurityAction.Demand, Name = Security.SellerUser)]
+        public Unit[] GetAvailableUnits(ProjectSearchParams searchParams)
         {
             throw new NotImplementedException();
         }

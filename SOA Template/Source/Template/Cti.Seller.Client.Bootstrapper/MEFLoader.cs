@@ -18,7 +18,7 @@ namespace Cti.Seller.Client.Bootstrapper
         {
             AggregateCatalog catalog = new AggregateCatalog();
 
-            catalog.Catalogs.Add(new AssemblyCatalog(typeof(InventoryClient).Assembly));
+            catalog.Catalogs.Add(new AssemblyCatalog(typeof(UnitInventoryClient).Assembly));
 
             if (catalogParts != null)
                 foreach (var part in catalogParts)

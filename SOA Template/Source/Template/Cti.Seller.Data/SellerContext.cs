@@ -13,19 +13,15 @@ namespace Cti.Seller.Data
     public class SellerContext : DbContext
     {
         public SellerContext()
-            : base("name=Cti.Seller")
+            : base("name=Seller")
         {
             Database.SetInitializer<SellerContext>(null);
         }
 
         public DbSet<Account> AccountSet { get; set; }
 
-        public DbSet<Car> CarSet { get; set; }
-
-        public DbSet<Rental> RentalSet { get; set; }
-
-        public DbSet<Reservation> ReservationSet { get; set; }
-
+        public DbSet<Unit> UnitSet { get; set; }
+       
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -35,10 +31,8 @@ namespace Cti.Seller.Data
             modelBuilder.Ignore<IIdentifiableEntity>();
 
             modelBuilder.Entity<Account>().HasKey<int>(e => e.AccountId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Car>().HasKey<int>(e => e.CarId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Rental>().HasKey<int>(e => e.RentalId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Reservation>().HasKey<int>(e => e.ReservationId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Car>().Ignore(e => e.CurrentlyRented);
+            modelBuilder.Entity<Unit>().HasKey<int>(e => e.UnitId ).Ignore(e => e.EntityId);
+
         }
     }
 }

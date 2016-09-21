@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\AccountManager.cs" />
+    <Compile Include="Managers\LocationManager.cs" />
     <Compile Include="Managers\UnitInventoryManager.cs" />
     <Compile Include="ManagerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

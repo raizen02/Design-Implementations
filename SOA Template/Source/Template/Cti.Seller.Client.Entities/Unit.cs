@@ -107,8 +107,8 @@ namespace Cti.Seller.Client.Entities
 
      public class ProjectParams : ObjectBase
     {
-        public int LocationId { get; set; }
-        public int ProjectId { get; set; }
+        public string LocationId { get; set; }
+        public string ProjectId { get; set; }
         public int PhaseId { get; set; }
         public string Block { get; set; }
         public string InventoryUnit { get; set; }

@@ -21,7 +21,9 @@ namespace Cti.Seller.Data
         public DbSet<Account> AccountSet { get; set; }
 
         public DbSet<Unit> UnitSet { get; set; }
-       
+
+        public DbSet<Location> LocationSet { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

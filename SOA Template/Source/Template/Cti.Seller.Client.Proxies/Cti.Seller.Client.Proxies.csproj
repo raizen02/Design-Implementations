@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Service Proxies\AccountClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service Proxies\LocationClient.cs" />
     <Compile Include="Service Proxies\UnitInventoryClient.cs" />
     <Compile Include="ServiceFactory.cs" />
   </ItemGroup>

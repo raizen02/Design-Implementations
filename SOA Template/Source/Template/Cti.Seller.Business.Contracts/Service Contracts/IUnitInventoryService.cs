@@ -17,4 +17,21 @@ namespace Cti.Seller.Business.Contracts
         Unit[] GetAvailableUnits(ProjectSearchParams searchParams);
 
     }
+
+
+    [ServiceContract]
+    public interface ILocationService
+    {
+        //[OperationContract]
+        //[FaultContract(typeof(NotFoundException))]
+        //[FaultContract(typeof(AuthorizationValidationException))]
+        //Location[] GetLocations(ProjectSearchParams searchParams);
+
+        [OperationContract]
+        [FaultContract(typeof(NotFoundException))]
+        [FaultContract(typeof(AuthorizationValidationException))]
+        Location[] GetLocations();
+
+
+    }
 }

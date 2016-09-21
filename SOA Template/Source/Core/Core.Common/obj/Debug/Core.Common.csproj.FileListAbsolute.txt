@@ -30,3 +30,35 @@ E:\Software Development\SOA Template\Source\Core\Core.Common\bin\Debug\zh-CN\Flu
 E:\Software Development\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.csprojResolveAssemblyReference.cache
 E:\Software Development\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.dll
 E:\Software Development\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.pdb
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\Core.Common.dll.config
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\Core.Common.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\Core.Common.pdb
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\Core.Common.Contracts.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\EntityFramework.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\FluentValidation.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\Core.Common.Contracts.pdb
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\EntityFramework.xml
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\FluentValidation.pdb
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\FluentValidation.xml
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\cs\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\da\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\de\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\es\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\fa\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\fi\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\fr\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\it\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\ko\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\mk\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\nl\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\pl\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\pt\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\ru\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\sv\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\tr\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\bin\Debug\zh-CN\FluentValidation.resources.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.csprojResolveAssemblyReference.cache
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.dll
+C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common\obj\Debug\Core.Common.pdb

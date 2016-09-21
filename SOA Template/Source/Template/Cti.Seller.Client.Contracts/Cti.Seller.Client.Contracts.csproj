@@ -49,6 +49,7 @@
     <Compile Include="Data Contracts\KeyValueData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service Contracts\IAccountService.cs" />
+    <Compile Include="Service Contracts\ILocationService.cs" />
     <Compile Include="Service Contracts\IUnitInventoryService.cs" />
   </ItemGroup>
   <ItemGroup>

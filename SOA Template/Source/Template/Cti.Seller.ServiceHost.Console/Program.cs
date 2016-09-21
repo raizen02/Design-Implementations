@@ -28,10 +28,12 @@ namespace Cti.Seller.ServiceHost
 
             SM.ServiceHost hostUnitInventoryManager = new SM.ServiceHost(typeof(UnitInventoryManager));
             SM.ServiceHost hostAccountManager = new SM.ServiceHost(typeof(AccountManager));
+            SM.ServiceHost hostLocationManager = new SM.ServiceHost(typeof(LocationManager));
+
 
             StartService(hostUnitInventoryManager, "UnitInventoryManager");
             StartService(hostAccountManager, "AccountManager");
-
+            StartService(hostLocationManager, "LocationManager");
 
             //Backend Job Sample Implementations
             //System.Timers.Timer timer = new System.Timers.Timer(10000);
@@ -51,6 +53,7 @@ namespace Cti.Seller.ServiceHost
 
             StopService(hostUnitInventoryManager, "UnitInventoryManager");
             StopService(hostAccountManager, "AccountManager");
+            StopService(hostLocationManager, "LocationManager");
         }
 
         //static void OnTimerElapsed(object sender, ElapsedEventArgs e)

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Repositories\DaoHelperMSSQL.cs" />
+    <Compile Include="Data Repositories\LocationRepository.cs" />
     <Compile Include="Data Repositories\UnitRepository.cs" />
     <Compile Include="SellerContext.cs" />
     <Compile Include="DataRepositoryBase.cs" />

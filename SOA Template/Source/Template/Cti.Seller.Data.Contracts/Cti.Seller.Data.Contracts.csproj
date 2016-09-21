@@ -59,6 +59,7 @@
     <Compile Include="DTOs\ProjectInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository Interfaces\IAccountRepository.cs" />
+    <Compile Include="Repository Interfaces\ILocationRepository.cs" />
     <Compile Include="Repository Interfaces\IUnitRepository.cs" />
   </ItemGroup>
   <ItemGroup />

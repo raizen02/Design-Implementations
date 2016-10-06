@@ -203,6 +203,39 @@ namespace Cti.Seller.Data.Data_Repositories
             }
         }
 
+        public static void SaveData(SQL sql)
+        {
+
+            SqlCommand cmd = new SqlCommand();
+            OpenConnection();
+            cmd.Connection = _conn;
+            cmd.CommandType = System.Data.CommandType.Text;
+            if (Parameters != null)
+            {
+                cmd.Parameters.AddRange(Parameters);
+            }
+            SqlTransaction trans = cmd.Connection.BeginTransaction();
+            try
+            {
+                cmd.Transaction = trans;
+                foreach (string item in Sql)
+                {
+                    cmd.CommandText = item;
+                    cmd.ExecuteNonQuery();
+                }
+                trans.Commit();
+            }
+            catch (Exception)
+            {
+                trans.Rollback();
+                throw;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
     }
 }
 

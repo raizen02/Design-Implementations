@@ -110,7 +110,7 @@ namespace Cti.Seller.Data
         {
             StringBuilder sql = new StringBuilder();
             sql.Append("SELECT TOP 100 [locCode]")
-               .Append("[locBarangay]")
+               .Append(",[locBarangay]")
                 .Append(",[locCityMunipality]")
                 .Append(",[locZipCode]")
                  .Append(",[locProvince]")

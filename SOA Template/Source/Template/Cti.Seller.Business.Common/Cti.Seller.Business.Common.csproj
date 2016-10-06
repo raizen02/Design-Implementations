@@ -7,8 +7,8 @@
     <ProjectGuid>{5FF24820-A4E5-443F-BB88-289183528211}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Business.Common</RootNamespace>
-    <AssemblyName>CarRental.Business.Common</AssemblyName>
+    <RootNamespace>Cti.Seller.Business.Common</RootNamespace>
+    <AssemblyName>Cti.Seller.Business.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

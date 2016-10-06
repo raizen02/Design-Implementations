@@ -7,8 +7,8 @@
     <ProjectGuid>{4323B92B-86CC-436B-AB27-E2C19411DAEE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Common.Contracts</RootNamespace>
-    <AssemblyName>CarRental.Common.Contracts</AssemblyName>
+    <RootNamespace>Cti.Sellerl.Common.Contracts</RootNamespace>
+    <AssemblyName>Cti.Seller.Common.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

@@ -66,5 +66,18 @@ namespace SampleWeb.Controllers.API
         }
 
 
+        [HttpGet]
+        [Route("locationsbybatch")]
+        public HttpResponseMessage GetLocationByBatch(HttpRequestMessage request,int index, int batchsize)
+        {
+            return GetHttpResponse(request, () =>
+            {
+
+                Location[] location = _ILocationService.GetLocations();
+                return request.CreateResponse<Location[]>(HttpStatusCode.OK, location.ToArray());
+            });
+        }
+
+
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{18AFF0EC-4272-4CA0-AAD5-013A361838FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Business.Contracts</RootNamespace>
-    <AssemblyName>CarRental.Business.Contracts</AssemblyName>
+    <RootNamespace>Cti.Seller.Business.Contracts</RootNamespace>
+    <AssemblyName>Cti.Seller.Business.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

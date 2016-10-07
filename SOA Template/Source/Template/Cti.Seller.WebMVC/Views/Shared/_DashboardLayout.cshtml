@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ECRM</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/bootstrapcss")
+    @Styles.Render("~/bundles/datetimepickercss")
+    @Scripts.Render("~/bundles/modernizr")
+ 
+</head>
+<body class="ecrm-body skin-blue hold-transition sidebar-collapse sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+            <a class="logo">
+                <span class="logo-mini"><img src="/images/logo.png" style="width:45px;height:30px"></span>
+                <span class="logo-lg"><img src="/images/logo.png" style="width:70px;height:55px"></span>
+            </a>
+            <nav class="navbar navbar-static-top" role="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="glyphicon glyphicon-menu-hamburger menu-toggle-icon"></span>
+                    <p style="display:inline; padding-left:1em; font-family:Arial">ECRM | @ViewBag.Title</p>
+                    <span class="sr-only">Toggle navigation</span>
+                </a>              
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="hidden-xs">Sally Ruth Acosta</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-header">
+                                    <p>
+                                        <strong>Sally Ruth Acosta</strong>
+                                        <br>Sales Manager
+                                    </p>
+                                    <br>
+                                    <p>
+                                        Ruben Ragas
+                                        <small>Sales Director</small>
+                                    </p>
+                                </li>
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="login" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="~/Dashboard"><i class="glyphicon glyphicon-dashboard"></i> <span>Dashboard</span></a></li>
+                    <li><a href="~/Leads"><i class="glyphicon glyphicon-user"></i> <span>Leads</span></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-cog"></i> <span>Maintenance</span></a></li>
+                </ul>
+            </section>
+        </aside>
+        
+        <div class="content-wrapper">
+            <section Class="content-header"></section>
+            <section Class="content">
+                @RenderBody()
+            </section>
+        </div>
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2016 <a href="#">Filinvest</a>.</strong> All rights reserved.
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryajax")
+        @Scripts.Render("~/bundles/bootstrapjs")       
+        @Scripts.Render("~/bundles/respondjs")  
+        @Scripts.Render("~/bundles/datetimepickerjs")
+        @*@Scripts.Render("~/scripts/ecrmscripts") //TODO: RETURN TO BUNDLED AFTER DEBUG*@ 
+        @Scripts.Render("~/scripts/ecrm.min.js")
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>
+

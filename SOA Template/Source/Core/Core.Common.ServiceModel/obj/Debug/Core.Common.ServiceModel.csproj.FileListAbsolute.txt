@@ -7,3 +7,7 @@ C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\bin\Debug\Core.Common.ServiceModel.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.ServiceModel\obj\Debug\Core.Common.ServiceModel.pdb

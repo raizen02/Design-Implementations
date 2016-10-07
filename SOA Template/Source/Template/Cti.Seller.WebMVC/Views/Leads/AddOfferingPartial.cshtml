@@ -1,0 +1,84 @@
+﻿@model ecrm.Models.LeadsViewModels.LeadOfferingItemViewModel
+@{
+    //ADD OFFERING
+    AjaxOptions ajaxOptions_addoffer = new AjaxOptions
+    {
+        UpdateTargetId = "addedit_tabcontent",
+        OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'OfferUnit_Loader')",
+        OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'OfferUnit_Loader');",
+    };
+
+    using (Ajax.BeginForm("SaveOffering", new { leadID = Model.LeadID}, ajaxOptions_addoffer, new { @id = "form_addoffer" }))
+    {
+        @Html.AntiForgeryToken()       
+        <div class="col-xs-12 col-sm-9 col-lg-9">
+            <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.OfferInformation</h4>
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.OfferProjectName)
+                    @Html.DropDownListFor(model => model.OfferProjectName, Model.ProjectNames, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.OfferProjectName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.UnitNo)
+                    @Html.EditorFor(model => model.UnitNo, new { htmlAttributes = new { @class = "form-control", @Value = Model.UnitNo } })
+                    @Html.ValidationMessageFor(model => model.UnitNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.UnitAmount)
+                    @Html.EditorFor(model => model.UnitAmount, new { htmlAttributes = new { @class = "form-control", @Value = Model.UnitAmount } })
+                    @Html.ValidationMessageFor(model => model.UnitAmount, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.ProbabilityString)
+                    @Html.DropDownListFor(model => model.ProbabilityString, Model.Probabilities, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ProbabilityString, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.ReserveFeeNo)
+                    @Html.EditorFor(model => model.ReserveFeeNo, new { htmlAttributes = new { @class = "form-control", @Value = Model.ReserveFeeNo } })
+                    @Html.ValidationMessageFor(model => model.ReserveFeeNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-lg-3 lead-info-save">
+            <div class="btn-group no-margin pull-right">
+                <button type="button" id="" class="btn btn-default" onclick="InitialAddOfferValidation();" aria-label="Left Align" style="width:90px;">
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> @Resources.Save
+                </button>
+                <button type="button" class="btn btn-default" onclick="$('#form_offerunit').hide();$('#offer_list_container').show();ClearPromptMessage('tab_offering');" aria-label="Left Align" style="width:90px;">
+                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> @Resources.Cancel
+                </button>
+            </div>
+        </div>    
+        
+        <input type="submit" id="btn_saveoffering" style="display:none;" />
+    }
+}
+
+
+<script>
+    //INITIAL VALIDATION, CREATES A CONFIRMATION MESSAGE WHEN VALIDATION SUCCESSFUL
+    function InitialAddOfferValidation() {
+        ClearPromptMessage('tab_offering');
+        var form = document.getElementById('form_addoffer');
+        $(form).validate();
+        if (!$(form).valid()) {
+            AppendPromptMessage('tab_offering', '@Resources.IncompleteOrInvalidFields');
+            return;
+        }
+        else {
+            AppendConfirmationMessage('tab_offering', '@Resources.SaveLeadConfirmation', 'btn_saveoffering');
+        }
+    }
+   
+</script>
+@Scripts.Render("~/bundles/jqueryval")

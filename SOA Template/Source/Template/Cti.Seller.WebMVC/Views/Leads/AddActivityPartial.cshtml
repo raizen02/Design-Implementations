@@ -1,0 +1,94 @@
+﻿@model ecrm.Models.LeadsViewModels.LeadActivityItemViewModel
+@{
+    //ADD ACTIVITY
+    AjaxOptions ajaxOptions_addactivity = new AjaxOptions
+    {
+        UpdateTargetId = "addedit_tabcontent",
+        OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'Activity_Loader')",
+        OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'Activity_Loader');",
+    };
+
+    using (Ajax.BeginForm("SaveActivity", new { leadID = Model.LeadID }, ajaxOptions_addactivity, new { @id = "form_addactivity" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="col-xs-12 col-sm-9 col-lg-9">
+            <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.ActivityDetails</h4>
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.LeadTaskString)
+                    @Html.DropDownListFor(model => model.LeadTaskString, Model.ActivityDescriptions, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LeadTaskString, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.ActivityProjectName)
+                    @Html.DropDownListFor(model => model.ActivityProjectName, Model.ProjectNames, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ActivityProjectName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.ClientFeedbackString)
+                    @Html.DropDownListFor(model => model.ClientFeedbackString, Model.ClientFeedbacks, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ClientFeedbackString, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-6">
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.Activity_Date)
+                    @Html.EditorFor(model => model.Activity_Date, new { htmlAttributes = new { @class = "form-control datepicker" } })
+                    @Html.ValidationMessageFor(model => model.Activity_Date, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-padding">
+                    <div class="form-group form-group-padding">
+                        @Html.LabelFor(model => model.NextStep)
+                        @Html.DropDownListFor(model => model.NextStep, Model.NextSteps, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NextStep, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.Activity_Remarks)
+                    @Html.TextAreaFor(model => model.Activity_Remarks, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Activity_Remarks, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-lg-3 lead-info-save">
+
+            <div class="btn-group no-margin pull-right">
+                <button type="button" class="btn btn-default" onclick="InitialAddActivityValidation();" aria-label="Left Align" style="width:90px;">
+                    <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> @Resources.Save
+                </button>
+                <button type="button" class="btn btn-default" onclick="$('#form_addactivity').hide(); $('#activity_list_container').show(); ClearPromptMessage('tab_activity');" aria-label="Left Align" style="width:90px;">
+                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> @Resources.Cancel
+                </button>
+            </div>
+            <input type="submit" id="btn_saveactivity" style="display:none;" />
+        </div>
+    }
+}
+
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    //INITIAL VALIDATION, CREATES A CONFIRMATION MESSAGE WHEN VALIDATION SUCCESSFUL
+    function InitialAddActivityValidation() {
+        ClearPromptMessage('tab_activity');
+        var form = document.getElementById('form_addactivity');
+        $(form).validate();
+        if (!$(form).valid()) {
+            AppendPromptMessage('tab_activity', '@Resources.IncompleteOrInvalidFields');
+            return;
+        }
+        else {
+            AppendConfirmationMessage('tab_activity', '@Resources.SaveLeadConfirmation', 'btn_saveactivity');
+        }
+    }
+    jQuery('.datepicker').datetimepicker();
+</script>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECRM - @ViewBag.Title</title>
+
+    @Styles.Render("~/Content/css")      
+    @Styles.Render("~/bundles/bootstrapcss")
+    @Scripts.Render("~/bundles/modernizr")
+    
+  
+</head>
+<body class="skin-blue hold-transition layout-top-nav sidebar-mini">
+    <div class="wrapper">
+        @RenderBody()
+
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2016 <a href="#">Filinvest</a>.</strong> All rights reserved.
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrapjs")
+        @Scripts.Render("~/bundles/respondjs")
+        @Scripts.Render("~/scripts/ecrmscripts")
+        @RenderSection("scripts", required: false)
+    </div>
+
+</body>
+</html>

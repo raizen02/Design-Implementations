@@ -38,5 +38,15 @@ namespace Cti.Seller.Client.Entities
         public List<FloorBlock> FloorBlocks { get; set; }
 
 
+        //public List<Unit> GetUnits(String CurrentPhase, String CurrentFloor)
+        //{
+        //    //List<Unit> results = PhaseBuildings.Where(P => P.Name == CurrentPhase)
+        //    //                                   .SelectMany(P => P.FloorBlocks)
+        //    //                                   .Where(F => F.Name == CurrentFloor)
+        //    //                                   .SelectMany(F => F.Units).ToList();
+
+
+        //    //return results;
+        //}
     }
 }

@@ -1,0 +1,163 @@
+﻿@model ecrm.Models.LeadsViewModels.LeadInfoViewModel
+
+
+
+
+
+
+
+
+<div class="tab-pane active" id="tab_leadlisting">
+     @if (ViewBag.Message != null)
+    {
+    <div class="alert alert-success fade in" id="custom_prompt_message">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        @ViewBag.Message
+    </div>
+    }
+    @using (Html.BeginForm("SaveLeadInfo", "Leads", FormMethod.Post, new { @id = "form_editlead" })) //TODO: Edit Lead has same function with save lead, change this accordingly
+   
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.LeadID, new { @id = "SaveLeadInfo_LeadID", @Value = Model.LeadID })
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.Name</h4>
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.FirstName)
+                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.LastName)
+                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.MiddleName)
+                    @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.ContactInformation</h4>
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.MobileNo)
+                    @Html.EditorFor(model => model.MobileNo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.MobileNo, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.LandlineNo)
+                    @Html.EditorFor(model => model.LandlineNo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.LandlineNo, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.Work</h4>
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.Company)
+                    @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-paddingrow-fluid">
+                    @Html.LabelFor(model => model.Position)
+                    @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-lg-3">
+                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.Address</h4>
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.Street)
+                    @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.City)
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.Province)
+                    @Html.EditorFor(model => model.Province, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Province, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group form-group-padding">
+                    @Html.LabelFor(model => model.Country)
+                    @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-9 col-lg-9 lead-info-form">
+                <div class="row-fluid"><h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">@Resources.LeadInformation</h4></div>
+                <div class="col-xs-12 col-sm-4 col-lg-4 form-group form-group-padding">
+                    @Html.LabelFor(model => model.LeadSource)
+                    @Html.DropDownListFor(model => model.LeadSource, Model.LeadSources, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LeadSource, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-lg-4  form-group form-group-padding">
+                    @Html.LabelFor(model => model.LeadTouchpoint)
+                    @Html.DropDownListFor(model => model.LeadTouchpoint, Model.LeadTouchpoints, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LeadTouchpoint, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-xs-12 col-sm-4 col-lg-4  form-group form-group-padding">
+                    @Html.LabelFor(model => model.LeadStatus)
+                    @Html.DropDownListFor(model => model.Status, Model.LeadStatuses, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LeadStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-lg-3 lead-info-save">
+                <div class="btn-group no-margin pull-right">
+                    <button type="button" onclick="InitialEditLeadValidation();" class="btn btn-default" aria-label="Left Align" style="width:90px;">
+                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> @Resources.Save
+                    </button>
+                    <a href="@Url.Action("Index", "Leads")" class="btn btn-default" aria-label="Left Align" style="width:90px;">
+                        <span class='glyphicon glyphicon-circle-arrow-left' aria-hidden='true'></span>
+                        <span>@Resources.Back</span>
+                    </a> 
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <input id="btn_updateleadinfo" type="submit" style="display:none;" />
+    }
+</div>
+
+@Scripts.Render("~/bundles/jqueryval")
+<script type="text/javascript">    
+    //INITIAL VALIDATION, CREATES A CONFIRMATION MESSAGE WHEN VALIDATION SUCCESSFUL
+    function InitialEditLeadValidation() {
+        ClearPromptMessage('tab_leadlisting');
+        var form = document.getElementById('form_editlead');
+        $(form).validate();
+        if (!$(form).valid()) {
+            AppendPromptMessage('tab_leadlisting', '@Resources.IncompleteOrInvalidFields');
+            return;
+        }
+        else {
+            AppendConfirmationMessage('tab_leadlisting', '@Resources.SaveLeadConfirmation', 'btn_updateleadinfo');
+        }
+    }
+
+    FAI_InitializeRequiredFields();
+</script>

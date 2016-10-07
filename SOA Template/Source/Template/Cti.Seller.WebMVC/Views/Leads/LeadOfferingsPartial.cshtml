@@ -1,0 +1,284 @@
+﻿@using ecrm.Infrastructure.Enum;
+@model ecrm.Models.LeadsViewModels.LeadOfferingViewModel
+
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success fade in" id="custom_prompt_message">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        @ViewBag.Message
+    </div>
+}
+<div class="tab-pane active" id="tab_offering">
+    @{
+        AjaxOptions ajaxOptions = new AjaxOptions
+        {
+            UpdateTargetId = "addedit_tabcontent",
+            OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'LeadList_Loader');ClearPromptMessage('tab_offering');",
+            OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'LeadList_Loader')"
+        };
+    }
+    @using (Ajax.BeginForm("LeadOfferingsView", new { leadID = Model.LeadID }, ajaxOptions))
+    {
+
+        @Html.HiddenFor(model => model.LeadID, new { @id = "holder_leadid", @Value = Model.LeadID })
+        @Html.HiddenFor(model => model.CurrentPageIndex, new { @id = "holder_pageno", @Value = Model.CurrentPageIndex })
+        @Html.HiddenFor(model => model.SortBy, new { @id = "holder_sortby", @Value = Model.SortBy })
+        @Html.HiddenFor(model => model.SortAscending, new { @id = "holder_sorascending", @Value = Model.SortAscending })
+        @Html.HiddenFor(model => model.SearchFilter, new { @id = "holder_searchfilter", @Value = Model.SearchFilter })
+        @Html.HiddenFor(model => model.PartialProjectName, new { @id = "holder_partialprojectname", @Value = Model.PartialProjectName })
+        @Html.HiddenFor(model => model.PartialUnitNo, new { @id = "holder_partialunitno", @Value = Model.PartialUnitNo })
+        @Html.HiddenFor(model => model.Probability, new { @id = "holder_probability", @Value = Model.Probability })
+        @Html.HiddenFor(model => model.ReserveFeeNo, new { @id = "holder_reservefeeno", @Value = Model.ReserveFeeNo })
+
+        <input type="submit" id="initOffering" style="display: none;" />
+    }
+    <div id="offer_list_container">
+        <div class="form-group">
+            <div class="box-body table-responsive no-padding" style="min-height:170px;">
+
+                <div class="container-fluid" style="margin-top:10px;margin-bottom:10px;">
+                    <div class="col-xs-6 col-sm-6 col-lg-6 btn-group no-margin pull-left">
+                        @{
+                            //SHOW ADD OFFERING FORM
+                            AjaxOptions ajaxOptions_addoffer = new AjaxOptions
+                            {
+                                UpdateTargetId = "form_offerunit",
+                                OnBegin = "FAI_AjaxLoader('form_offerunit', 'OfferUnit_Loader')",
+                                OnComplete = "FAI_AjaxLoaderRemove('form_offerunit', 'OfferUnit_Loader');ClearPromptMessage('tab_offering');",
+                                OnSuccess = "$('#form_offerunit').show();$('#offer_list_container').hide();"
+                            };
+
+                            using (Ajax.BeginForm("AddOffering", new { leadID = Model.LeadID }, ajaxOptions_addoffer))
+                            {
+                                @Html.HiddenFor(model => model.LeadID, Model.LeadID)
+                                <button type="submit" id="btn_addoffering" class="btn btn-default" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>@Resources.AddOffer
+                                </button>
+                            }
+                        }
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-lg-6 pull-right input-group">
+                        <a class="input-group-addon">@Resources.Search</a>
+                        <input id="offering_search_key" type="text" class="form-control" onkeyup="ResetSearchValue();" aria-label="">
+                        <div class="input-group-btn">
+                            <button type="button" id="dropdown_offering_filter" filter='@LeadOfferingSearchFilterFieldEnum.OfferProjectName' class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Resources.Project <span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#" onclick="ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.OfferProjectName','@Resources.Project');">@Resources.Project</a></li>
+                                <li><a href="#" onclick="ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.UnitNo','@Resources.UnitNo');">@Resources.UnitNo</a></li>
+                                <li><a href="#" onclick="ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.Probability','@Resources.Probability');">@Resources.Probability</a></li>
+                                <li><a href="#" onclick="ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.ReserveFeeNo','@Resources.ReserveFeeNo');">@Resources.ReserveFeeNo</a></li>
+                            </ul>
+                        </div><!-- /btn-group -->
+                    </div>
+                </div>
+
+                <table id="leads_edit_table_offer" class="table table-hover tablesorter">
+                    <thead>
+                        <tr>
+                            <th class="not-header"></th>
+                            <th class="faisorter-th" id="@LeadOfferingSortFieldEnum.Project" onclick="SortOffer('@LeadOfferingSortFieldEnum.Project')">
+                                @Resources.ProjectName
+                            </th>
+                            <th class="faisorter-th" id="@LeadOfferingSortFieldEnum.UnitAmount" onclick="SortOffer('@LeadOfferingSortFieldEnum.UnitAmount')">
+                                @Resources.UnitAmount
+                            </th>
+                            <th class="faisorter-th" id="@LeadOfferingSortFieldEnum.Date" onclick="SortOffer('@LeadOfferingSortFieldEnum.Date')">
+                                @Resources.OfferDate
+                            </th>
+                            <th class="faisorter-th" id="@LeadOfferingSortFieldEnum.Probability" onclick="SortOffer('@LeadOfferingSortFieldEnum.Probability')">
+                                @Resources.Probability
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.LeadOfferings)
+                        {
+                            <tr>
+                                <td>
+                                    @{
+                                        //EDIT OFFERING
+                                        AjaxOptions ajaxOptions_editoffer = new AjaxOptions
+                                        {
+                                            UpdateTargetId = "form_offerunit",
+                                            OnBegin = "FAI_AjaxLoader('form_offerunit', 'OfferUnit_Loader');",
+                                            OnComplete = "FAI_AjaxLoaderRemove('form_offerunit', 'OfferUnit_Loader');ClearPromptMessage('tab_offering');",
+                                            OnSuccess = "$('#form_offerunit').show();$('#offer_list_container').hide();",
+                                        };
+
+                                        using (Ajax.BeginForm("EditOffering", new { leadID = item.LeadID, offeringID = item.OfferingID }, ajaxOptions_editoffer))
+                                        {
+                                            <button type="submit" id="btn_editoffering_offeringid" class="glyphicon glyphicon-edit fai-table-buttons" aria-label="Left Align" style="border:none;background:transparent;"></button>
+                                        }
+                                    }
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OfferProjectName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UnitAmount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ProbabilityString)
+                                </td>
+                            </tr>
+                                        }
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+
+        @{
+            int a, startpage;
+
+            if (Model.CurrentPageIndex <= 6) { startpage = 1; }
+            else { startpage = Model.CurrentPageIndex - 5; }
+        }
+
+        <div id="div_lead_pagination" class="box-footer clearfix">
+
+            <ul class="pagination pagination-sm no-margin pull-right">
+                @for (a = startpage; a < Model.PageCount + 1 && a < @Model.CurrentPageIndex + 6; a++)
+            {
+                    <li>
+                        <a href="#" onclick="GotoPage(@a.ToString());">@a.ToString()</a>
+                    </li>
+                }
+            </ul>
+        </div>
+
+        <div id="div_lead_pagination" class="box-footer clearfix">
+            <h5 class="pull-right"><strong>Page @Model.CurrentPageIndex of @Model.PageCount</strong></h5>
+        </div>
+
+    </div>
+
+    <div class="container-fluid" id="form_offerunit">
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    function ChangeOfferListSearchFiltering(key, value) {
+        FAI_SetAttributeValue('dropdown_offering_filter', 'filter', key);
+        FAI_SetInnerHTML('dropdown_offering_filter', value + ' <span class="caret"></span>');
+        FAI_SetValue('holder_searchfilter', key);
+        GetSearchText(key);    
+    }
+
+    //HIDE THE FORM INITIALLY
+    $('#form_offerunit').hide();
+
+    //DETECT FILTER STATE AND SEARCH PARAMETER AT REFRESH
+    var filter_state = FAI_GetValue('holder_searchfilter');
+    function GetSearchText(filter_state) {
+        if (filter_state == '0') {
+            FAI_SetValue('offering_search_key', FAI_GetValue('holder_partialprojectname'));          
+        }
+        if (filter_state == '@LeadOfferingSearchFilterFieldEnum.OfferProjectName') {
+            FAI_SetValue('offering_search_key', FAI_GetValue('holder_partialprojectname'));      
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.UnitNo') {
+            FAI_SetValue('offering_search_key', FAI_GetValue('holder_partialunitno'));         
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.Probability') {
+            FAI_SetValue('offering_search_key', FAI_GetValue('holder_probability'));         
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.ReserveFeeNo') {
+            FAI_SetValue('offering_search_key', FAI_GetValue('holder_reservefeeno'));          
+        }
+    }
+
+    function GetDropdown_State(filter_state) {
+        if (filter_state == '0') {           
+            ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.OfferProjectName', '@Resources.ProjectName'); 
+        }
+        if (filter_state == '@LeadOfferingSearchFilterFieldEnum.OfferProjectName') {         
+            ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.OfferProjectName', '@Resources.ProjectName');
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.UnitNo') {           
+            ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.UnitNo', '@Resources.UnitNo');      
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.Probability') {          
+            ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.Probability', '@Resources.Probability');          
+        }
+        else if (filter_state == '@LeadOfferingSearchFilterFieldEnum.ReserveFeeNo') {         
+            ChangeOfferListSearchFiltering('@LeadOfferingSearchFilterFieldEnum.ReserveFeeNo', '@Resources.ReserveFeeNo');       
+        }
+    }
+
+    GetDropdown_State(filter_state);
+    GetSearchText(filter_state);
+
+    //SEARCH KEYPRESS ENTER
+    FAI_KeyPressEnter('offering_search_key', 'initOffering');
+
+
+    //ONCHANGE SEARCH TEXT BOX
+    function ResetSearchValue() {
+        var search_key = FAI_GetValue('offering_search_key');
+        var filter_state = FAI_GetAttributeValue('dropdown_offering_filter', 'filter');
+        switch (filter_state) {
+            case '@LeadOfferingSearchFilterFieldEnum.OfferProjectName':
+                FAI_SetValue('holder_partialunitno', '');
+                FAI_SetValue('holder_probability', 0);
+                FAI_SetValue('holder_reservefeeno', '');
+                FAI_SetValue('holder_partialprojectname', search_key);
+                break;
+            case '@LeadOfferingSearchFilterFieldEnum.UnitNo':
+                FAI_SetValue('holder_partialprojectname', '');
+                FAI_SetValue('holder_probability', 0);
+                FAI_SetValue('holder_reservefeeno', '');
+                FAI_SetValue('holder_partialunitno', search_key);
+                break;
+            case '@LeadOfferingSearchFilterFieldEnum.Probability':
+                FAI_SetValue('holder_partialprojectname', '');
+                FAI_SetValue('holder_partialunitno', '');
+                FAI_SetValue('holder_reservefeeno', '');
+                FAI_SetValue('holder_probability', search_key);
+                break;
+            case '@LeadOfferingSearchFilterFieldEnum.ReserveFeeNo':
+                FAI_SetValue('holder_partialprojectname', '');
+                FAI_SetValue('holder_partialunitno', '');
+                FAI_SetValue('holder_probability', 0);
+                FAI_SetValue('holder_reservefeeno', search_key);
+                break;
+        }
+
+    }
+
+    //GOTO SPECIFIC PAGE //CAN BE REFACTORED
+    function GotoPage(pNo) {
+        FAI_SetValue('holder_pageno', pNo);
+        document.getElementById('initOffering').click();
+    }
+
+    //SORT LEADS //CAN BE REFACTORED
+    function SortOffer(sortfield) {
+        FAI_SetValue('holder_sortby', sortfield);
+        if (document.getElementById('holder_sorascending').value == 'True') { FAI_SetValue('holder_sorascending', 'False'); }
+        else { FAI_SetValue('holder_sorascending', 'True'); }
+        document.getElementById('initOffering').click();
+    }
+
+    //FIX FOR BUG WHEN CURRENT PAGE IS GREATER THAN THE PAGE SIZE
+    if (parseInt('@Model.CurrentPageIndex') > parseInt('@Model.PageCount')) {
+        GotoPage(1);
+    }
+
+    //SCRIPT FOR CHANGING THE SORT ICON TO ASCENDING OR DESCENDING  //CAN BE REFACTORED
+    var sortby = FAI_GetValue('holder_sortby');
+    var sorascending = FAI_GetValue('holder_sorascending');
+    var asc_class = 'faisorter-th asc';
+    if (sorascending == 'False') { asc_class = 'faisorter-th desc'; }
+    if (sortby != 'ID') {
+        document.getElementById(sortby).className = asc_class;
+    }
+</script>
+

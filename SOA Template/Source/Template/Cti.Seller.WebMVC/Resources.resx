@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="LandlineNo" xml:space="preserve">
+    <value>Landline No.</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LeadsListing" xml:space="preserve">
+    <value>Leads Listing</value>
+  </data>
+  <data name="LeadSource" xml:space="preserve">
+    <value>Lead Source</value>
+  </data>
+  <data name="LeadStatus" xml:space="preserve">
+    <value>Lead Status</value>
+  </data>
+  <data name="LeadTouchpoint" xml:space="preserve">
+    <value>Lead Touchpoint</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>Mobile No.</value>
+  </data>
+  <data name="LeadName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Province" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>House No./ Street / Village / Barangay</value>
+  </data>
+  <data name="AddLead" xml:space="preserve">
+    <value>Add Lead</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back To List</value>
+  </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>{0} is required.</value>
+  </data>
+  <data name="FieldMustBe10To30Chars" xml:space="preserve">
+    <value>{0} must be 10 to 30 characters long.</value>
+  </data>
+  <data name="FieldMustBe2To30Chars" xml:space="preserve">
+    <value>{0} must be 2 to 30 characters long.</value>
+  </data>
+  <data name="FieldMustBeAlphanumeric" xml:space="preserve">
+    <value>{0} must be alphanumeric.</value>
+  </data>
+  <data name="FieldMustBeNumeric" xml:space="preserve">
+    <value>{0} must be numeric.</value>
+  </data>
+  <data name="FieldMustBeValidEmail" xml:space="preserve">
+    <value>{0} must be a valid email address.</value>
+  </data>
+  <data name="FieldsMustNotExceed30Chars" xml:space="preserve">
+    <value>{0} must not exceed 30 characters long.</value>
+  </data>
+  <data name="FieldsMustNotExceed50Chars" xml:space="preserve">
+    <value>{0} must not exceed 50 characters long.</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Record was successfully saved.</value>
+  </data>
+  <data name="Leads" xml:space="preserve">
+    <value>Leads</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Probability" xml:space="preserve">
+    <value>Probability</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="ReserveFeeNo" xml:space="preserve">
+    <value>Reservation Fee No.</value>
+  </data>
+  <data name="UnitAmount" xml:space="preserve">
+    <value>Unit Amount</value>
+  </data>
+  <data name="UnitNo" xml:space="preserve">
+    <value>Unit No.</value>
+  </data>
+  <data name="ActivityDescription" xml:space="preserve">
+    <value>Activity Description</value>
+  </data>
+  <data name="Activity_Date" xml:space="preserve">
+    <value>Activity Date</value>
+  </data>
+  <data name="ClientFeedBack" xml:space="preserve">
+    <value>Cliend Feedback</value>
+  </data>
+  <data name="FieldMustBe5To255Chars" xml:space="preserve">
+    <value>{0} must be 5 to 255 characters long.</value>
+  </data>
+  <data name="NextStep" xml:space="preserve">
+    <value>Next Step</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="FieldMustBe5To15Chars" xml:space="preserve">
+    <value>{0} must be 5 to 15 characters long.</value>
+  </data>
+  <data name="FieldsMustBeGreaterThan0" xml:space="preserve">
+    <value>{0} must be greater than 0.</value>
+  </data>
+  <data name="LeadID" xml:space="preserve">
+    <value>Lead ID</value>
+  </data>
+  <data name="EditLead" xml:space="preserve">
+    <value>Edit Lead</value>
+  </data>
+  <data name="LeadAging" xml:space="preserve">
+    <value>Lead Aging</value>
+  </data>
+  <data name="SellerName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="PositionCode" xml:space="preserve">
+    <value>Position Code</value>
+  </data>
+  <data name="Reservations" xml:space="preserve">
+    <value>Reservations</value>
+  </data>
+  <data name="UnconvertedLeads" xml:space="preserve">
+    <value>Unconverted</value>
+  </data>
+  <data name="UnitsOffered" xml:space="preserve">
+    <value>Units Offered</value>
+  </data>
+  <data name="SaveError" xml:space="preserve">
+    <value>There was an error saving your record.</value>
+  </data>
+  <data name="LeadStatus1" xml:space="preserve">
+    <value>Lead</value>
+  </data>
+  <data name="Suspects" xml:space="preserve">
+    <value>Suspects</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="DownLine" xml:space="preserve">
+    <value>DownLine</value>
+  </data>
+  <data name="LeadStatus2" xml:space="preserve">
+    <value>For Conversion To Prospect</value>
+  </data>
+  <data name="LeadStatus3" xml:space="preserve">
+    <value>Prospect</value>
+  </data>
+  <data name="LeadStatus4" xml:space="preserve">
+    <value>Junk/Bad Lead</value>
+  </data>
+  <data name="NewLead" xml:space="preserve">
+    <value>New Lead</value>
+  </data>
+  <data name="NewLeadStatus" xml:space="preserve">
+    <value>New Lead Status</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="AuditLogUpdateStatus" xml:space="preserve">
+    <value>{{{{"LeadID":"{0}","Status":"{1}"}}}}</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BulkAction1" xml:space="preserve">
+    <value>Convert to Prospect</value>
+  </data>
+  <data name="BulkAction2" xml:space="preserve">
+    <value>Re-Assign</value>
+  </data>
+  <data name="BulkAction3" xml:space="preserve">
+    <value>Drop Lead</value>
+  </data>
+  <data name="ConversionToProspectError" xml:space="preserve">
+    <value>Error in Converting the Lead(s) to Prospect(s)</value>
+  </data>
+  <data name="ConversionToProspectSuccess" xml:space="preserve">
+    <value>Successfully Converted Lead(s) to Prospect(s)</value>
+  </data>
+  <data name="AddOffer" xml:space="preserve">
+    <value>Add Offer</value>
+  </data>
+  <data name="AddActivity" xml:space="preserve">
+    <value>Add Activity</value>
+  </data>
+  <data name="Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="ActivityDetails" xml:space="preserve">
+    <value>Activity Details</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="OfferInformation" xml:space="preserve">
+    <value>Offer Information</value>
+  </data>
+  <data name="Offerings" xml:space="preserve">
+    <value>Offerings</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="ScheduleEvent" xml:space="preserve">
+    <value>Schedule Event</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ToggleDropdown" xml:space="preserve">
+    <value>Toggle Dropdown</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="CheckAll" xml:space="preserve">
+    <value>Check All</value>
+  </data>
+  <data name="OfferingProbability1" xml:space="preserve">
+    <value>Cold - 0%</value>
+  </data>
+  <data name="OfferingProbability2" xml:space="preserve">
+    <value>Warm - 50%</value>
+  </data>
+  <data name="OfferingProbability3" xml:space="preserve">
+    <value>Hot - 90%</value>
+  </data>
+  <data name="OfferingProbability4" xml:space="preserve">
+    <value>With RF - 100%</value>
+  </data>
+  <data name="AddLeadError" xml:space="preserve">
+    <value>There was a problem adding the lead.  Please check your input and try again.  If the problem persists, please report to the system administrator.</value>
+  </data>
+  <data name="AddLeadSuccess" xml:space="preserve">
+    <value>New Lead Successfuly Saved</value>
+  </data>
+  <data name="FieldsMustBeValidContactNo" xml:space="preserve">
+    <value>{0} must be a valid contact number.</value>
+  </data>
+  <data name="FieldsMustNotExceed15Chars" xml:space="preserve">
+    <value>{0} must not exceed 15 characters long.</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ContactInformation" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="LeadInformation" xml:space="preserve">
+    <value>Lead Information</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="ViewEdit" xml:space="preserve">
+    <value>View/Edit</value>
+  </data>
+  <data name="NoSelectedForConversionToProspect" xml:space="preserve">
+    <value>No selected Lead(s) for Converstion to Propect(s).</value>
+  </data>
+  <data name="SaveLeadConfirmation" xml:space="preserve">
+    <value>Are you sure you want to add this lead?</value>
+  </data>
+  <data name="IncompleteOrInvalidFields" xml:space="preserve">
+    <value>Please check for incomplete or invalid fields.</value>
+  </data>
+  <data name="NoSelectedItem" xml:space="preserve">
+    <value>Please select atleast one record</value>
+  </data>
+  <data name="FieldsMustNotExceed100Chars" xml:space="preserve">
+    <value>{0} must not exceed 100 characters long.</value>
+  </data>
+  <data name="OfferDate" xml:space="preserve">
+    <value>Date Offered</value>
+  </data>
+  <data name="UpdateConfirmation" xml:space="preserve">
+    <value>Are you sure you want to update this record?</value>
+  </data>
+  <data name="UpdateSuccess" xml:space="preserve">
+    <value>Record has been updated </value>
+  </data>
+  <data name="LeadSource1" xml:space="preserve">
+    <value>Seller Upline</value>
+  </data>
+  <data name="LeadSource2" xml:space="preserve">
+    <value>LMC</value>
+  </data>
+  <data name="LeadSource3" xml:space="preserve">
+    <value>Cluster</value>
+  </data>
+  <data name="LeadSource4" xml:space="preserve">
+    <value>Own Sourced</value>
+  </data>
+  <data name="LeadSource5" xml:space="preserve">
+    <value>Referrals</value>
+  </data>
+  <data name="LeadTouchPoint1" xml:space="preserve">
+    <value>Exhibit</value>
+  </data>
+  <data name="LeadTouchPoint2" xml:space="preserve">
+    <value>Open House</value>
+  </data>
+  <data name="LeadTouchPoint3" xml:space="preserve">
+    <value>Model Unit</value>
+  </data>
+  <data name="LeadTouchPoint4" xml:space="preserve">
+    <value>MarketingOffice</value>
+  </data>
+  <data name="LeadTouchPoint5" xml:space="preserve">
+    <value>LMC</value>
+  </data>
+  <data name="LeadTouchPoint6" xml:space="preserve">
+    <value>OnSite</value>
+  </data>
+  <data name="LeadTouchPoint7" xml:space="preserve">
+    <value>Saturation</value>
+  </data>
+  <data name="ClientFeedback1" xml:space="preserve">
+    <value>Confirmed Schedule</value>
+  </data>
+  <data name="ClientFeedback2" xml:space="preserve">
+    <value>For Booking</value>
+  </data>
+  <data name="ClientFeedback3" xml:space="preserve">
+    <value>Interested</value>
+  </data>
+  <data name="ClientFeedback4" xml:space="preserve">
+    <value>Not Decided</value>
+  </data>
+  <data name="ClientFeedback5" xml:space="preserve">
+    <value>Not Interested</value>
+  </data>
+  <data name="ClientFeedback6" xml:space="preserve">
+    <value>Out Of Town</value>
+  </data>
+  <data name="ClientFeedback7" xml:space="preserve">
+    <value>Rescheduled Appointment</value>
+  </data>
+  <data name="ClientFeedback8" xml:space="preserve">
+    <value>Reviewing Payment Terms</value>
+  </data>
+  <data name="ClientFeedback9" xml:space="preserve">
+    <value>Unable To Contact</value>
+  </data>
+  <data name="LeadTask1" xml:space="preserve">
+    <value>Initial Meeting</value>
+  </data>
+  <data name="LeadTask2" xml:space="preserve">
+    <value>Tripping</value>
+  </data>
+  <data name="LeadTask3" xml:space="preserve">
+    <value>Presentation</value>
+  </data>
+  <data name="LeadTask4" xml:space="preserve">
+    <value>Requirements</value>
+  </data>
+  <data name="LeadTask5" xml:space="preserve">
+    <value>Followup Meeting</value>
+  </data>
+  <data name="LeadTask6" xml:space="preserve">
+    <value>Followup Tripping</value>
+  </data>
+  <data name="LeadTask7" xml:space="preserve">
+    <value>Followup Presentation</value>
+  </data>
+  <data name="LeadTask8" xml:space="preserve">
+    <value>Followup Requirements</value>
+  </data>
+  <data name="Prospects" xml:space="preserve">
+    <value>Prospects</value>
+  </data>
+</root>

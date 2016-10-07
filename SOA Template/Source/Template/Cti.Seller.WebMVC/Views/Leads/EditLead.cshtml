@@ -1,0 +1,259 @@
+﻿@model ecrm.Models.LeadsViewModels.LeadInfoViewModel
+
+@{
+    ViewBag.Title = Resources.EditLead;
+}
+
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">            
+            <div class="box-header">
+                <p class="pull-left">
+                    <i class="glyphicon glyphicon-user" style="font-size:45px; float:left"></i>
+                    <strong style="padding-left:.5em;font-size:20px;">@Model.FirstName @Model.LastName</strong><br>
+                    <small style="padding-left:.7em">@Model.LeadStatus</small>
+                </p>
+            </div>
+           
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Custom Tabs -->
+                        <div class="nav-tabs-custom">
+                            <ul class="nav nav-tabs nav-tabs-ecrm">
+                                <li>
+                                    @{
+                                        @*PARTIAL VIEW FOR LEADINFO TAB*@
+                                    AjaxOptions ajaxOptions_leadinfo = new AjaxOptions
+                                    {
+                                        UpdateTargetId = "addedit_tabcontent",
+                                        OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'LeadList_Loader')",
+                                        OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'LeadList_Loader')",
+                                    };
+
+                                    using (Ajax.BeginForm("LeadInfoView", new { }, ajaxOptions_leadinfo))
+                                    {
+                                        @Html.HiddenFor(model => model.LeadID, new { @id = "SaveLeadInfo_LeadID", @Value = Model.LeadID })
+                                        <input type="submit" id="btn_tab_leadinfo" onclick="ClickTab('btn_tab_leadinfo');" value=@Resources.Info class="fai-tab active" />
+                                        }
+                                    }
+                                </li>
+                                <li>
+                                    @{
+                                        @*PARTIAL VIEW FOR LEADOFFERINGS TAB*@
+                                    AjaxOptions ajaxOptions_leadoffering = new AjaxOptions
+                                    {
+                                        UpdateTargetId = "addedit_tabcontent",
+                                        OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'LeadList_Loader')",
+                                        OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'LeadList_Loader')"
+                                    };
+
+                                    using (Ajax.BeginForm("LeadOfferingsView", new { }, ajaxOptions_leadoffering))
+                                    {
+                                        @Html.HiddenFor(model => model.LeadID, new { @id = "SaveLeadInfo_LeadID", @Value = Model.LeadID })
+                                        <input type="submit" id="btn_tab_offerings" onclick="ClickTab('btn_tab_offerings');" value=@Resources.Offerings class="fai-tab enabled" />
+                                        }
+                                    }
+
+                                </li>
+                                <li>
+                                    @{
+                                        @*PARTIAL VIEW FOR LEADACTIVITY TAB*@
+                                    AjaxOptions ajaxOptions_leadactivity = new AjaxOptions
+                                    {
+                                        UpdateTargetId = "addedit_tabcontent",
+                                        OnBegin = "FAI_AjaxLoader('addedit_tabcontent', 'LeadList_Loader')",
+                                        OnComplete = "FAI_AjaxLoaderRemove('addedit_tabcontent', 'LeadList_Loader')"
+                                    };
+                                    using (Ajax.BeginForm("LeadActivityView", new { }, ajaxOptions_leadactivity))
+                                    {
+                                        @Html.HiddenFor(model => model.LeadID, new { @id = "SaveLeadInfo_LeadID", @Value = Model.LeadID })
+                                        <input type="submit" id="btn_tab_activity" onclick="ClickTab('btn_tab_activity');" value="@Resources.ScheduleEvent" class="fai-tab enabled" />
+                                        }
+                                    }
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="addedit_tabcontent">
+                                @if (ViewBag.Message != null)
+                                {
+                                    <div class="alert alert-success fade in" id="custom_prompt_message">
+                                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                        @ViewBag.Message
+                                    </div>
+                                }
+                                <div class="tab-pane active" id="tab_leadlisting">
+                                    @using (Html.BeginForm("SaveLeadInfo", "Leads", FormMethod.Post, new { @id = "form_editlead" })) //TODO: Edit Lead has same function with save lead, change this accordingly
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        @Html.HiddenFor(model => model.LeadID, new { @id = "SaveLeadInfo_LeadID", @Value = Model.LeadID })
+                                        <div class="">
+                                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">Name</h4>
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.FirstName)
+                                                    @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                                                </div>
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.LastName)
+                                                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.MiddleName)
+                                                    @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">Contact Information</h4>
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.MobileNo)
+                                                    @Html.EditorFor(model => model.MobileNo, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.MobileNo, "", new { @class = "text-danger" })
+                                                </div>
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.LandlineNo)
+                                                    @Html.EditorFor(model => model.LandlineNo, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.LandlineNo, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.Email)
+                                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">Work</h4>
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.Company)
+                                                    @Html.EditorFor(model => model.Company, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Company, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="form-group form-group-paddingrow-fluid">
+                                                    @Html.LabelFor(model => model.Position)
+                                                    @Html.EditorFor(model => model.Position, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Position, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-3 col-lg-3">
+                                                <h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">Address</h4>
+                                                <div class="form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.Street)
+                                                    @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+                                                </div>
+                                                <div class="form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.City)
+                                                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.Province)
+                                                    @Html.EditorFor(model => model.Province, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Province, "", new { @class = "text-danger" })
+                                                </div>
+                                                <div class="form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.Country)
+                                                    @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="">
+                                            <div class="col-xs-12 col-sm-9 col-lg-9 lead-info-form">
+                                                <div class="row-fluid"><h4 style="border-bottom:5px solid #3c8dbc;font-weight:700;">Lead Information</h4></div>
+                                                <div class="col-xs-12 col-sm-4 col-lg-4 form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.LeadSource)
+                                                    @Html.DropDownListFor(model => model.LeadSource, Model.LeadSources, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.LeadSource, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-lg-4  form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.LeadTouchpoint)
+                                                    @Html.DropDownListFor(model => model.LeadTouchpoint, Model.LeadTouchpoints, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.LeadTouchpoint, "", new { @class = "text-danger" })
+                                                </div>
+
+                                                <div class="col-xs-12 col-sm-4 col-lg-4  form-group form-group-padding">
+                                                    @Html.LabelFor(model => model.LeadStatus)
+                                                    @Html.DropDownListFor(model => model.Status, Model.LeadStatuses, new { @class = "form-control" })
+                                                    @Html.ValidationMessageFor(model => model.LeadStatus, "", new { @class = "text-danger" })
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-3 col-lg-3 lead-info-save">
+                                                <div class="btn-group no-margin pull-right">
+                                                    <button type="button" onclick="InitialEditLeadValidation();" class="btn btn-default" aria-label="Left Align" style="width:90px;">
+                                                        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> @Resources.Save
+                                                    </button>
+                                                    <a href="@Url.Action("Index", "Leads")" class="btn btn-default" aria-label="Left Align" style="width:90px;">
+                                                        <span class='glyphicon glyphicon-circle-arrow-left' aria-hidden='true'></span>
+                                                        <span>@Resources.Back</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <input id="btn_updateleadinfo" type="submit" style="display:none;" />
+                                    }
+                                </div>
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+                   
+@section Scripts {   
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">  
+        //HANDLES THE APPEARANCE OF THE TAB WHEN CLICKED 
+        function ClickTab(tabID) {
+            var tab_leadinfo = document.getElementById("btn_tab_leadinfo");
+            var tab_offer = document.getElementById("btn_tab_offerings");
+            var tab_activity = document.getElementById("btn_tab_activity");
+
+            tab_leadinfo.className = "fai-tab enabled";
+            tab_offer.className = "fai-tab enabled";
+            tab_activity.className = "fai-tab enabled";
+
+            var clicked_tab = document.getElementById(tabID);
+            clicked_tab.className = "fai-tab active";
+
+            
+        }
+
+        //INITIAL VALIDATION, CREATES A CONFIRMATION MESSAGE WHEN VALIDATION SUCCESSFUL
+        function InitialEditLeadValidation() {
+            ClearPromptMessage('tab_leadlisting');
+            var form = document.getElementById('form_editlead');
+            $(form).validate();
+            if (!$(form).valid()) {
+                AppendPromptMessage('tab_leadlisting', '@Resources.IncompleteOrInvalidFields');
+                return;
+            }
+            else {
+                AppendConfirmationMessage('tab_leadlisting', '@Resources.SaveLeadConfirmation', 'btn_updateleadinfo');
+            }
+        }
+
+        FAI_InitializeRequiredFields();
+    </script>
+}

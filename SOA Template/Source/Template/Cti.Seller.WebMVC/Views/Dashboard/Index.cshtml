@@ -1,0 +1,60 @@
+﻿@model ecrm.Models.DashboardViewModels.DashboardViewModel
+
+@{    
+    ViewBag.Title = Resources.Dashboard;
+}
+
+<div class="box">
+    <div class="box-header row-fluid">
+        <div class="col-xs-12 col-sm-8 col-lg-8">
+            <h3>@Html.DisplayFor(model => model.SellerName)</h3>
+            <h4>@Html.DisplayFor(model => model.SellerPosition)</h4>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-lg-4">
+            <h3 class="pull-right">Summary of Leads</h3>
+        </div>
+    </div>
+    <div class="box-body table-responsive no-padding">
+        <table id="dashboard_table_leadsummary" class="table table-hover tablesorter">
+            <thead>
+                <tr>
+                    <th class="not-header"></th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().PositionCode)</th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().SellerName)</th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().UnconvertedLeads)</th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().Prospects)</th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().UnitsOffered)</th>
+                    <th class="header">@Html.DisplayNameFor(model => model.DashboardItems.First().Reservations)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.DashboardItems)
+                {
+                    <tr>
+                        <td></td>
+                        <td>@Html.DisplayFor(modelItem => item.PositionCode)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SellerName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.UnconvertedLeads)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Prospects)</td>
+                        <td>@Html.DisplayFor(modelItem => item.UnitsOffered)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Reservations)</td>                       
+                   </tr>                                
+                }         
+               
+            </tbody>
+        </table>
+
+        <div class="box-footer clearfix">
+            <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+

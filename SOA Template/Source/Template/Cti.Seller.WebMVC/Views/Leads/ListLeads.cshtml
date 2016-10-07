@@ -1,0 +1,157 @@
+﻿
+@using ecrm.Infrastructure.Enum;
+@model ecrm.Models.LeadsViewModels.LeadsListViewModel
+
+@{
+    ViewBag.Title = Resources.LeadsListing;
+}
+<style>
+    .lead_button_group > div {
+        float: left;
+        display: block;
+        position: relative;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="box">
+    <div class="box-header row-fluid">
+        @{
+            AjaxOptions ajaxOptions = new AjaxOptions
+            {
+                UpdateTargetId = "div_leads_partial_items",             
+                OnBegin = "FAI_AjaxLoader('div_leads_partial_items', 'LeadList_Loader');ClearPromptMessage('lead_form');",
+                OnComplete = "FAI_AjaxLoaderRemove('div_leads_partial_items', 'LeadList_Loader')"             
+            };
+        }
+        @using (Ajax.BeginForm("PageView", ajaxOptions))
+        {
+            <div class="lead_button_group col-xs-12 col-sm-8 col-lg-8">
+
+                @Html.HiddenFor(model => model.CurrentPageIndex, new { @id = "holder_pageno", @Value = Model.CurrentPageIndex })
+                @Html.HiddenFor(model => model.LeadStatus, new { @id = "holder_leadstatus", @Value = Model.LeadStatus })              
+                @Html.HiddenFor(model => model.SortBy, new { @id = "holder_sortby", @Value = Model.SortBy })
+                @Html.HiddenFor(model => model.SortAscending, new { @id = "holder_sorascending", @Value = Model.SortAscending })
+                
+                <div class="btn-group">
+                    <a href="@Url.Action("AddLead", "Leads")" class="btn btn-default" aria-label="Left Align">
+                        <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>
+                        <span>@Resources.Add</span>
+                    </a>
+                </div>
+                             
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default">@Resources.Action</button>
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">@Resources.ToggleDropdown</span>
+                    </button>
+                    @* TODO: Detect The Actions Available via Rank Level of the User*@
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" onclick="BulkAction_ConvertToProspects();">@Resources.BulkAction1</a></li>
+                        <li><a href="#">@Resources.BulkAction2</a></li>                     
+                        <li><a href="#">@Resources.BulkAction3</a></li>
+                    </ul>
+                </div>
+
+                <div class="btn-group" style="width:258px;">
+                    <div class="input-group">
+                        <span class="input-group-addon">Filter</span>
+                        <select id="dropdown_filter" onchange="ChangeLeadFilter();" class="form-control" style="width:200px;">
+                            <option value="0">@Resources.All</option>
+                            <option value="1">@Resources.LeadStatus1</option>
+                            <option value="2">@Resources.LeadStatus2</option>
+                            <option value="3">@Resources.LeadStatus3</option>
+                            <option value="4">@Resources.DownLine</option>
+                        </select>                     
+                    </div>                  
+                </div>        
+                <div class="btn-group">
+                    @Html.DropDownListFor(model => model.DownlineSellerID, Model.Downlines, "(SELECT A DOWNLINE)", new { @class = "form-control", @id = "dropdown_downlines", @onchange = "document.getElementById('initLeads').click();" })
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-lg-4">
+                <div class="input-group input-group-sm">              
+                    @Html.EditorFor(model => model.PartialLeadName, Model.PartialLeadName, new { htmlAttributes = new { @class = "form-control pull-right" } })
+                    <div class="input-group-btn">
+                        <button type="submit" onclick="document.getElementById('initLeads').click();"class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" id="initLeads" style="display: none;" />
+        }
+    </div>
+    <div class="box-body table-responsive no-padding" id="div_leads_partial_items" style="min-height:200px;">        
+    </div>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        document.getElementById('initLeads').click();
+        var dd_downlines = $('#dropdown_downlines');
+        var dd_filter = document.getElementById("dropdown_filter");
+
+        //DETECT FILTER STATE AT INITIAL LOAD
+        var filter_val = parseInt(dd_filter.options[dd_filter.selectedIndex].value);
+        switch (filter_val) {
+            case 0: case 1: case 2: case 3:
+                FAI_SetValue('holder_leadstatus', filter_val);
+                dd_downlines.selectedIndex = 0;
+                dd_downlines.hide();
+                break;
+            case 4:
+                FAI_SetValue('holder_leadstatus', 0);
+                dd_downlines.show();
+                break;
+        }
+
+        //CHANGE FILTRATION PARAMETERS
+        function ChangeLeadFilter() {
+            filter_val = parseInt(dd_filter.options[dd_filter.selectedIndex].value);
+            switch (filter_val) {
+                case 0: case 1: case 2: case 3:
+                    FAI_SetValue('holder_leadstatus', filter_val);
+                    dd_downlines.selectedIndex = 0;
+                    dd_downlines.hide();
+                    break;
+                case 4:
+                    FAI_SetValue('holder_leadstatus', 0);
+                    dd_downlines.show();
+                    break;
+            }
+            document.getElementById('initLeads').click();
+
+        }
+        //GOTO SPECIFIC PAGE
+        function GotoPage(pNo) {
+            FAI_SetValue('holder_pageno', pNo);
+            document.getElementById('initLeads').click();
+        }
+
+        //SORT LEADS
+        function SortLeads(sortfield) {
+            FAI_SetValue('holder_sortby', sortfield);
+            if (document.getElementById('holder_sorascending').value == 'True') { FAI_SetValue('holder_sorascending', 'False'); }
+            else { FAI_SetValue('holder_sorascending', 'True'); }
+            document.getElementById('initLeads').click();
+        }
+
+        function BulkAction_ConvertToProspects() {          
+            var ElemID = 'lead_form'
+            ClearPromptMessage(ElemID);
+            if (FAI_ValidateAtLeastOneLeadStatChecked('.lead_bulk_action','@Resources.LeadStatus2') == 1) {
+                document.getElementById('btn_converttoprospects').click();
+            }
+            else if (FAI_FindAtleastOneChecked('.lead_bulk_action') == 0) {
+                AppendPromptMessage(ElemID, '@Resources.NoSelectedItem');
+            }
+            else {
+                AppendPromptMessage(ElemID, '@Resources.NoSelectedForConversionToProspect');
+            }
+
+        }
+
+    </script>
+}

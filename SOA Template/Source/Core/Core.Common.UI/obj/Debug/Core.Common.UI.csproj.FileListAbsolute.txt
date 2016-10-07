@@ -68,3 +68,38 @@ C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.g.resources
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.dll
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.UI.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.UI.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\FluentValidation.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\EntityFramework.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.Contracts.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\Core.Common.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\FluentValidation.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\FluentValidation.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\EntityFramework.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\cs\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\da\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\de\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\es\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\fa\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\fi\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\fr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\it\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\ko\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\mk\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\nl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\pl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\pt\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\ru\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\sv\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\tr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Controls\ValidationHeader.baml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Controls\ValidationHeader.g.cs
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI_MarkupCompile.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.g.resources
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.UI\obj\Debug\Core.Common.UI.pdb

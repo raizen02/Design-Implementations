@@ -7,3 +7,7 @@ C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\bin\Debug\Core.Common.Contracts.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Contracts\obj\Debug\Core.Common.Contracts.pdb

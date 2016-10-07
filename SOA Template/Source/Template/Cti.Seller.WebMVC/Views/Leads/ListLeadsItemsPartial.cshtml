@@ -1,0 +1,132 @@
+﻿@using ecrm.Infrastructure.Enum;
+@model ecrm.Models.LeadsViewModels.LeadsListViewModel
+
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success fade in" id="custom_prompt_message">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        @ViewBag.Message
+    </div>
+}      
+
+    @{     
+        AjaxOptions ajaxOptions_converttoprospect = new AjaxOptions
+        {
+            UpdateTargetId = "div_leads_partial_items",
+            OnBegin = "FAI_AjaxLoader('div_leads_partial_items', 'LeadList_Loader')",
+            OnComplete = "FAI_AjaxLoaderRemove('div_leads_partial_items', 'LeadList_Loader')"
+        };
+        using (Ajax.BeginForm("ConvertToProspect", new { }, ajaxOptions_converttoprospect, new { @id = "lead_form"}))
+        {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.CurrentPageIndex, new { @id = "holder_pageno", @Value = Model.CurrentPageIndex })
+            @Html.HiddenFor(model => model.LeadStatus, new { @id = "holder_leadstatus", @Value = Model.LeadStatus })
+            @Html.HiddenFor(model => model.SortBy, new { @id = "holder_sortby", @Value = Model.SortBy })
+            @Html.HiddenFor(model => model.SortAscending, new { @id = "holder_sorascending", @Value = Model.SortAscending })
+            @Html.HiddenFor(model => model.DownlineSellerID, new { @id = "holder_downlinesellerid", @Value = Model.DownlineSellerID })
+            @Html.HiddenFor(model => model.PartialLeadName, new { @id = "holder_partialleadname", @Value = Model.PartialLeadName })
+         <table id="leads_table_lead" class="table table-hover faitable">
+            <thead>
+                <tr id="lead_column_header">
+                    <th class="not-header"><input type="checkbox" id="checkall_leads" onclick="FAI_CheckAll('checkall_leads', '.lead_bulk_action');" class="chkbox"></th>
+                    <th class="faisorter-th" id="@LeadsListSortFieldsEnum.LeadName" onclick="SortLeads('@LeadsListSortFieldsEnum.LeadName')">
+                        @Html.DisplayNameFor(model => model.Leads.First().Name)
+                    </th>
+                    <th class="">
+                        @Html.DisplayNameFor(model => model.Leads.First().Contacts)
+                    </th>
+                    <th class="faisorter-th" id="@LeadsListSortFieldsEnum.Email" onclick="SortLeads('@LeadsListSortFieldsEnum.Email')">
+                        @Html.DisplayNameFor(model => model.Leads.First().Email)
+                    </th>
+                    <th class="faisorter-th" id="@LeadsListSortFieldsEnum.CreatedDate" onclick="SortLeads('@LeadsListSortFieldsEnum.CreatedDate')">
+                        @Html.DisplayNameFor(model => model.Leads.First().CreatedDate)
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="leadlist_data">
+       
+                    @foreach (var item in Model.Leads)
+                    {
+                        <tr>
+                            <td class="table_column_events">
+                                <input type="checkbox" lead_status="@Html.DisplayFor(modelItem => item.LeadStatus)"  onclick="FAI_UnCheckSingle('checkall_leads', '.lead_bulk_action');" class="lead_bulk_action" name="lead_bulk_action" value="@(item.LeadID)" />    
+                                @Html.ActionLink(" ", "EditLead", "Leads", new { leadID = item.LeadID }, new { @class = "glyphicon glyphicon-edit fai-table-buttons", title = Resources.ViewEdit })
+                                @Html.ActionLink(" ", "", "Leads", new { }, new { @class = "glyphicon glyphicon-trash fai-table-buttons", title = Resources.Delete })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                                <br />
+                                <small>@Html.DisplayFor(modelItem => item.LeadStatus)</small>
+                            </td>
+                            <td>
+                                @foreach (var contactItem in item.Contacts)
+                                {
+                                    @Html.DisplayFor(modelItem => contactItem)<br />
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedDate)
+                                <br />
+                                <small>@Html.DisplayFor(modelItem => item.LeadAging) day(s)</small>
+                            </td>
+
+                        </tr>
+                    }
+           
+  
+            </tbody>
+        </table>
+        <input type="submit" id="btn_converttoprospects" style="display:none;" />
+            }
+        }
+@{
+    int a, startpage;
+
+    if (Model.CurrentPageIndex <= 6) { startpage = 1; }
+    else { startpage = Model.CurrentPageIndex - 5; }
+}
+
+<div id="div_lead_pagination" class="box-footer clearfix">
+
+    <ul class="pagination pagination-sm no-margin pull-right">   
+        @for (a = startpage; a < Model.PageCount + 1 && a < @Model.CurrentPageIndex + 6; a++)
+        {
+            <li>
+                <a href="#" onclick="GotoPage(@a.ToString());">@a.ToString()</a>             
+            </li>
+        }
+    </ul>
+
+</div>
+
+<div id="div_lead_pagination" class="box-footer clearfix">
+    <h5 class="pull-right"><strong>Page @Model.CurrentPageIndex of @Model.PageCount</strong></h5>
+</div>
+
+@*TODO: FIX FOR BUG WHEN CURRENT PAGE IS GREATER THAN THE PAGE SIZE, IS THIS SUPPOSED TO BE HERE?*@
+<script type="text/javascript">
+    if (parseInt('@Model.CurrentPageIndex') > parseInt('@Model.PageCount')) {
+        GotoPage(1);
+    }
+
+    //SCRIPT FOR CHANGING THE SORT ICON TO ASCENDING OR DESCENDING
+    var sortby = FAI_GetValue('holder_sortby');
+    var sorascending = FAI_GetValue('holder_sorascending');
+    var asc_class = 'faisorter-th desc';
+    if (sorascending == 'True') { asc_class = 'faisorter-th asc'; }
+    if (sortby != 'ID') {
+        document.getElementById(sortby).className = asc_class;
+    }
+
+
+   
+</script>  
+@section Scripts {  
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

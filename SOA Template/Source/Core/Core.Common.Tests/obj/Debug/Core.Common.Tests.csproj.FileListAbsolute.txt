@@ -71,3 +71,39 @@ C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.csprojResolveAssemblyReference.cache
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.dll
 C:\Users\robme\Source\Repos\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.Tests.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.Tests.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Castle.Core.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Moq.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\EntityFramework.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\FluentValidation.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.Contracts.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Core.Common.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Castle.Core.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\Moq.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\EntityFramework.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\FluentValidation.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\FluentValidation.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\cs\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\da\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\de\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\es\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\fa\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\fi\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\fr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\it\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\ko\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\mk\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\nl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\pl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\pt\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\ru\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\sv\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\tr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Core\Core.Common.Tests\obj\Debug\Core.Common.Tests.pdb

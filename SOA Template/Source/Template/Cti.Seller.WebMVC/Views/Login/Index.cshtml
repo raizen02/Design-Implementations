@@ -1,0 +1,51 @@
+﻿@model ecrm.Models.LoginViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="content-wrapper">
+<section class="content">
+<center>
+<br><br><br><img src="/images/logo.png" style="width:120px;height:80px">
+<p style="font-family:Calibri; font-size:150%;">
+    Electronic Customer Relationship Management
+</p>
+</center>
+       
+
+<div class="login-box">
+<div class="login-box-body">
+    <p class="login-box-msg">Sign in to start your session</p>
+        @using (Html.BeginForm("Index", "Dashboard"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group has-feedback">                            
+                @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" , @id = "uname", @placeholder = "Username", @maxlength = "15" } })
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })                        
+            </div>
+
+            <div class="form-group has-feedback">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @id = "uname", @placeholder="Password", @type= "Password", @maxlength = "15" } })
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })                        
+            </div>
+
+            <div class="social-auth-links text-center">
+                <input type="submit" value="Sign in" class="btn btn-primary btn-block btn-flat" />                  
+            </div>                      
+        }
+            @*//TODO: PUT THESE LINKS TO APP CONFIG*@
+            <a href="https://kiosk.filinvest.com.ph/SSO-DEV/forgotpassword.aspx">Forgot Password?</a><br>         
+            <a href="https://kiosk.filinvest.com.ph/SSO-DEV/signup.aspx">Don't have an account? <strong>Sign Up</strong></a><br>            
+        </div>
+    </div>  
+</section> 
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

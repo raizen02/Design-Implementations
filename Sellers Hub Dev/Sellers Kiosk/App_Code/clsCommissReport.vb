@@ -14,7 +14,7 @@
 '                       CA2000 : Microsoft.Reliability : In method 'clsCommissReport.ExeCuteAko(clsCommissKiosk.ExecuteCommand, String, Integer, String, String, String, String, String, String, Integer, Integer)', call System.IDisposable.Dispose on object '_dimcmdMaintenance' before all references to it are out of scope.
 '                     Solution : Add try catch then dispose _dimsqlCommand on finally
 '***********************************************************************
-
+'dfsdfsdf
 Imports System
 Imports System.Data
 Imports System.Data.SqlClient

@@ -76,9 +76,12 @@ Partial Class dashboard
     ' Events of Main form
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim _dimclsGlobalFunctions As New clsGlobalFunctions
-
         SessionAPI.RefreshSessions(CurrentUser)
 
+        'Load UserProj
+        Dim uiHelper As New clsSearchFilterMgr("BOBAV")
+        uiHelper.LoadUserProjects()
+        '-----------
         If Page.IsPostBack = True Then
             Exit Sub
         End If

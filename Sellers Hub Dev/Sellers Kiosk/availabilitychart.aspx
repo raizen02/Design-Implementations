@@ -45,6 +45,10 @@
                             <label for="ddlLocation" >Location</label>
                             <select id="ddlLocation" name="Location" class="chosen-select-deselect form-control"  data-placeholder="Select an Option" >
                                 <option value=""></option>
+                                <% Dim uiHelper As New clsSearchFilterMgr("BOBAV") %> 
+                                 <% For i As Integer = 0 To uiHelper.UserAllowedLocations.Count - 1 %>                            
+                                   <% Response.Write("<option value=" & uiHelper.UserAllowedLocations(i).CityMunicipality & ">" & uiHelper.UserAllowedLocations(i).CityMunicipality & "</option>")%> 
+                                <% Next%>
                             </select> 
                         </div>
                         <div class="form-group ss-item-required">
@@ -534,45 +538,50 @@
             divPriceListInfo.html('');
             
             // Location 
-            function LoadLocation() {
-                var newOption = $('<option value=""></option>');
-                DropdownLoc.empty();
-                DropdownLoc.append(newOption);
-                DropdownLoc.trigger("chosen:updated");
+            //function LoadLocation() {
+            //    var newOption = $('<option value=""></option>');
+            //    DropdownLoc.empty();
+            //    DropdownLoc.append(newOption);
+            //    DropdownLoc.trigger("chosen:updated");
                 
-                $("#ddlLocation_chosen > a > span").text("Loading data");  
+            //    $("#ddlLocation_chosen > a > span").text("Loading data");  
                 
-                $.ajax({
-                       type: 'POST',
-                       url: ajaxurl,
-                       dataType: 'json',
-                       data: JSON.stringify({Mode:1,Location:'',Project:'',Phase:'',Block:'',RefObj:'',SubType:''}),
-                       contentType :'application/json; charset=utf-8',
-                       success: function (data) {
-                                   if ($.parseJSON(data.d) != undefined){
-                                       if ($.parseJSON(data.d)[0].ErrorNumber == 101){window.location.reload();};
-                                       displayError($.parseJSON(data.d)[0].ErrorMessage); 
-                                   }
-                                   else 
-                                   {   
-                                        DropdownLoc.empty();
-                                        DropdownLoc.append(new Option("", ""));
-                                        $(data).each(function (index, item) {
-                                           DropdownLoc.append(new Option(item.Description, item.Code));                       
-                                       });
-                                        DropdownLoc.trigger("chosen:updated");
-                                        $("#ddlLocation_chosen > a > span").text("Select an Option");  
-                                    };
-                                },
-                       error: function (xhr) {
-                            var err = JSON.parse(xhr.responseText);                        
-                            displayError('Error loading Location : ' + err.Message); 
-                       }
-                  });
-             };
+            //    if ($.parseJSON(data.d) != undefined) {
+            //        if ($.parseJSON(data.d)[0].ErrorNumber == 101) { window.location.reload(); };
+            //        displayError($.parseJSON(data.d)[0].ErrorMessage);
+            //    }
+
+             //   $.ajax({
+             //          type: 'POST',
+             //          url: ajaxurl,
+             //          dataType: 'json',
+             //          data: JSON.stringify({Mode:1,Location:'',Project:'',Phase:'',Block:'',RefObj:'',SubType:''}),
+             //          contentType :'application/json; charset=utf-8',
+             //          success: function (data) {
+             //                      if ($.parseJSON(data.d) != undefined){
+             //                          if ($.parseJSON(data.d)[0].ErrorNumber == 101){window.location.reload();};
+             //                          displayError($.parseJSON(data.d)[0].ErrorMessage); 
+             //                      }
+             //                      else 
+             //                      {   
+             //                           DropdownLoc.empty();
+             //                           DropdownLoc.append(new Option("", ""));
+             //                           $(data).each(function (index, item) {
+             //                              DropdownLoc.append(new Option(item.Description, item.Code));                       
+             //                          });
+             //                           DropdownLoc.trigger("chosen:updated");
+             //                           $("#ddlLocation_chosen > a > span").text("Select an Option");  
+             //                       };
+             //                   },
+             //          error: function (xhr) {
+             //               var err = JSON.parse(xhr.responseText);                        
+             //               displayError('Error loading Location : ' + err.Message); 
+             //          }
+             //     });
+           //  };
              
            //Call load location LoadLocation
-           LoadLocation();
+        //   LoadLocation();
         
            
           //Project

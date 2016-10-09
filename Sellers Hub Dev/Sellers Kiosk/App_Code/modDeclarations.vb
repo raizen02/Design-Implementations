@@ -19,7 +19,7 @@ Public Module modDeclarations
     Public MyMailTo As String = "vinx96@yahoo.com;inquiry@filinvestinternational.com"
 
     Public Const MyMSSQLServer2000FREBASConnectionString As String = "Data Source=172.20.5.79; Initial Catalog=FREBAS-SIM2; User ID=o-frebas; Password=admserverfrebas; Connection Timeout=0;Min Pool Size=20;Max Pool Size=4096;Connection Lifetime=120;"
-    Public Const MyMSSQLServer2000ConnectionString As String = "Data Source=localhost; Initial Catalog=Test; User ID=sa; Password=!qwerty123; Connection Timeout=0;Min Pool Size=20;Max Pool Size=4096;Connection Lifetime=120;"
+    Public Const MyMSSQLServer2000ConnectionString As String = "Data Source=192.168.137.1; Initial Catalog=Test; User ID=sa; Password=!qwerty123; Connection Timeout=0;Min Pool Size=20;Max Pool Size=4096;Connection Lifetime=120;"
 
     ' Public Const MyMSSQLServer2000ConnectionString As String = "Data Source=172.20.5.79; Initial Catalog=PropertyPortal-SIM2; User ID=usr-propertyportal; Password=Mvr&portal2; Connection Timeout=0;Min Pool Size=20;Max Pool Size=4096;Connection Lifetime=120;"
     'Public Const MyMSSQLServer2000ConnectionString As String = "Data Source=172.20.5.132; Initial Catalog=PropertyPortal-DEV;User ID=o-frebas; Password=admserverfrebas; Connection Timeout=0;Min Pool Size=20;Max Pool Size=4096;Connection Lifetime=120;"

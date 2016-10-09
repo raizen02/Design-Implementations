@@ -7,29 +7,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Seller.Client.BusinessD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Seller.Client.Entities", "Cti.Seller.Client.Entities\Cti.Seller.Client.Entities.csproj", "{0354345C-1B81-4228-97DA-FF822888C3ED}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sellers Kiosk", "..\..\Sellers Hub Dev\Sellers Kiosk\", "{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "..\test\test.csproj", "{B3AFB008-413E-470C-9B1A-CA40A152E98D}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sellers Kiosk(1)", "Sellers Kiosk\", "{F0EA9F67-3514-4CEB-8D10-41410B18FC9C}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{c9ac2d3c-4f2a-484f-bc63-918a339306bf}|Cti.Seller.Client.BusinessDomain.dll;{0354345C-1B81-4228-97DA-FF822888C3ED}|test.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_4566"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\Sellers Hub Dev\Sellers Kiosk\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4566\"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57298"
+		Debug.AspNetCompiler.PhysicalPath = "Sellers Kiosk\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57298\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_4566"
-		Release.AspNetCompiler.PhysicalPath = "..\..\Sellers Hub Dev\Sellers Kiosk\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4566\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57298"
+		Release.AspNetCompiler.PhysicalPath = "Sellers Kiosk\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57298\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "4566"
-		SlnRelativePath = "..\..\Sellers Hub Dev\Sellers Kiosk\"
+		VWDPort = "57298"
+		SlnRelativePath = "Sellers Kiosk\"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "..\test\test.csproj", "{B3AFB008-413E-470C-9B1A-CA40A152E98D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,14 +44,14 @@ Global
 		{0354345C-1B81-4228-97DA-FF822888C3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0354345C-1B81-4228-97DA-FF822888C3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0354345C-1B81-4228-97DA-FF822888C3ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{B3AFB008-413E-470C-9B1A-CA40A152E98D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B3AFB008-413E-470C-9B1A-CA40A152E98D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AFB008-413E-470C-9B1A-CA40A152E98D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AFB008-413E-470C-9B1A-CA40A152E98D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EA9F67-3514-4CEB-8D10-41410B18FC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EA9F67-3514-4CEB-8D10-41410B18FC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EA9F67-3514-4CEB-8D10-41410B18FC9C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EA9F67-3514-4CEB-8D10-41410B18FC9C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,635 @@
+﻿/* CSS Document */
+@font-face {
+    font-family: 'Calibri';
+    src: url('font/calibri.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CalibriIE';
+    src: url('font/calibri.eot');
+    font-weight: normal;
+}
+
+/*  Body    */
+html,body,form {
+    margin:0;
+    margin-left:0;
+    margin-top:0;
+    
+    padding:0;
+    height:100%;
+        
+    font-family: 'Calibri', 'CalibriIE';
+	background-repeat:no-repeat;
+	background-color: #0F468C
+}
+
+p {
+	margin:0;
+	padding:0;
+}
+
+/*	Content	*/
+#container {
+	width:95%;
+	margin-left:auto; 
+	margin-right:auto;
+	overflow:hidden;
+	background:#FAFAFA;
+}
+
+.mainPageContent {
+    float:left;
+    font-size:11px;
+}
+
+.col-right {
+    float:left;
+	text-align:right; 
+	font-weight:normal;
+}
+
+.col-rightNumber {
+    float:left;
+	text-align:right; 
+	font-weight:normal;
+	width: 150px;
+}
+
+.col-left {
+    float:left;
+	text-align:justify; 
+	font-weight:normal;
+}
+
+.clear {
+	clear:both;
+}
+
+.bodyText {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /*font-family: 'Calibri', 'CalibriIE';*/
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+
+#title {
+	text-align: left;
+	background:#CCC;
+	color:#000;
+	text-transform:uppercase;
+	padding:10px; 
+	font-size:14px; 
+    font-family: 'Calibri', 'CalibriIE';
+	text-shadow:0 1px 0px #fff;
+	font-weight:bold;
+}
+	
+.subTitle {
+	background:#EEE; 
+	color:#000; 
+	text-transform:uppercase; 
+	padding:5px; 
+	font-size:12px; 
+	text-align: left;
+    font-family: 'Calibri', 'CalibriIE';
+	text-shadow:0 1px 0px #fff;
+	font-weight:bold;
+}
+
+.subTitleCase {
+	background:#EED; 
+	color:#000; 
+	padding:5px; 
+	font-size:12px; 
+	text-align: left;
+    font-family: 'Calibri', 'CalibriIE';
+	text-shadow:0 1px 1px #fff;
+	font-weight:bold;
+	padding: 0px 15px 0px 15px
+}
+
+.module-content {
+	background:#FAFAFA;
+}
+
+.module-content table {
+	padding: 15px 15px 15px 15px
+}
+
+.crystalReport table {
+	padding: 0px 0px 0px 0px
+}
+
+.errorNoRecord {
+	text-align:center;
+	color: red;
+	font-size: 12pt;
+}
+
+.tableLabel {
+	width: 180px;
+	min-width: 180px;
+	padding: 5px 5px 5px 10px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.tableColon {
+	width: 10px;
+	min-width: 10px;
+	padding: 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.tableTextBox1 {
+	width: 100%;
+	padding: 5px;
+	background-color: #FFFFFF;  
+	border: solid 2px #F5F5F5;    
+	text-align: left;
+}
+
+.tableTextBox2 {
+	width: 75px;
+	min-width: 75px;
+	padding: 5px;
+	background-color: #FFFFFF;  
+	border: solid 2px #F5F5F5;    
+	text-align: left;
+}
+
+.tableButton {
+	padding: 2px 0 0 5px;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.buttonStyle {
+	width: 180px;
+	min-width: 180px;
+	padding: 5px 5px 5px 5px;
+	white-space: nowrap;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-decoration: none;
+	text-align: center;
+	color: #000000;
+}
+
+.spanUnitHoldStyle {
+	color: #777777;
+}
+
+.spanRemittedStyle {
+	color: #2E8B57;
+}
+
+.spanReservedStyle {
+	color: #FF0000;
+	padding-right: 10px;
+}
+
+/* Message Box Information Style */
+.info_box, .success_box, .warning_box, .error_box, .validation_box {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 20px 10px 20px 45px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    text-align: left;
+}
+
+.info_box ul, .success_box ul, .warning_box ul, .error_box ul, .validation_box ul {
+	padding:0; 
+	list-style-type: none; list-style-position: outside; list-style-image: none;
+	margin: 0; 
+}
+
+.info_box {
+	color: #00529B;
+	background-color: #BDE5F8;
+	background-image: url('../images/imgMsgInfo.png');
+}
+
+.success_box {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	background-image: url('../images/imgMsgSuccess.png');
+}
+
+.warning_box {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('../images/imgMsgWarning.png');
+}
+
+.error_box {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../images/imgMsgError.png');
+}
+
+.validation_box {
+    color: #D63301;
+    background-color: #FFCCBA;
+    background-image: url('../images/imgMsgValidaton.png');
+}
+
+#_eo_upload_form {
+	height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hr
+{
+	border: inset 1px rgba(0, 0, 0, 0.102);
+	margin: 4px;
+}
+
+/*  Image Style */
+img
+{
+	border: none;
+}
+
+/*  Background Style    */
+.bgHor
+{
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.bgVer
+{
+	background-repeat: repeat-y;
+	background-position: top;
+}
+
+.bgBoth
+{
+	background-repeat: repeat;
+	background-position: top;
+}
+
+/*  Font Styles */
+.tah9
+{
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.tah9bol
+{
+	font-family: Tahoma;
+	font-size: 9px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.tah10
+{
+	font-family: Tahoma;
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.tah11
+{
+	font-family: Tahoma;
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.tah13
+{
+	font-family: Tahoma;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+.ver9
+{
+	font-family: 'Calibri', 'CalibriIE';
+	font-size: 9px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.ver10
+{
+	font-family: 'Calibri', 'CalibriIE';
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.ver11
+{
+	font-family: 'Calibri', 'CalibriIE';
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+
+
+.errorStyle
+{
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	color: red; /*font-size: 7pt;*/
+	white-space:nowrap ; 
+}
+
+/*How to book sale css*/
+.comment
+{
+	padding-top: 3px;
+	padding-left: 15px;
+	padding-bottom: 3px;
+	font-size: 11px;
+	/*font-family: Verdana;*/
+	color: #999999;
+	text-align: justify;
+}
+
+.uList
+{
+	word-spacing: 0;
+	line-height: 150%;
+	margin-top: 0;
+	margin-bottom: 2;
+}
+
+.liList
+{
+	margin-top: 5;
+	font-size: 10px;
+	/*font-family: Verdana;*/
+	color: #999999;
+	text-align: justify;
+}
+
+.liList1
+{
+	padding-left: 10px;
+	font-size: 11px;
+	/*font-family: Verdana;*/
+	color: #999999;
+	line-height: 150%;
+	text-align: justify;
+}
+
+
+.msgBoxTextStyle
+{
+	font-size: 10pt;
+}
+
+/*  Table CSS */
+.tableCss
+{
+	width: 100%;
+	text-align:left;
+}
+
+.tableCss .code
+{
+	width: 100px;
+}
+.tableCss table
+{
+	padding-top :0px;
+	padding-bottom:0px; 
+	padding-left:0px;
+}
+
+
+/*
+.tableTD-Pad td
+{
+	padding-left:10px;
+}
+*/
+
+/* Style for Textbox */
+
+.label
+{
+	width: 180px;
+	min-width: 180px;
+	padding: 0 0 0 20px;
+	white-space: nowrap;
+	height: 24px;
+}
+
+/* Style for Field Name*/
+.label2
+{
+	width: 200px;
+	height: 22px;
+	white-space: nowrap;
+}
+
+/* Style for Field Name*/
+.name0
+{
+  white-space: nowrap;
+  height: 22px;
+  padding-left : 10px;
+  background-color: #FFFFFF;  
+  border: solid 2px #F5F5F5  ;    
+}
+
+.value0
+{
+  white-space: nowrap;
+  height: 22px;
+  padding-right : 10px;
+  background-color: #FFFFFF;  
+  border: solid 2px #F5F5F5  ; 
+  text-align:right ;    
+}
+
+/* Style for Field Name*/
+.name1
+{
+	width: 100px;
+}
+/* Style for Textbox */
+.name2
+{
+	width: 200px;
+}
+/* Style for Textbox */
+.name250
+{
+	width: 100%;
+}
+/* Style for Textbox */
+.name3
+{
+	width: 300px;
+}
+/* Style for Textbox */
+.name305
+{
+	width: 305px;
+}
+/* Style for Dropdownlist */
+.name4
+{
+	width: 405px;
+}
+/* Style for Dropdownlist / Textbox */
+
+.buttonsearch
+{
+	width: 30px;
+	height: 22px;
+	margin: 0px 4px 0px 0px;
+}
+
+.subContentDiv
+{
+	padding: 20px 0 0 20px;
+}
+
+/* EO Grid Column Header Style */
+.EOGridColumnHeaderStyle
+{
+	background-color: #206BA4;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.DGVRowStyle
+{
+	padding:2px 5px  2px 5px ;
+}
+
+.DGVHeaderRowStyle
+{
+	padding-left:10px; 
+	padding-right:10px; 
+	background-color: #206BA4;
+	height:20px;
+	color:#FFFFFF;
+	font-weight:bold ; 
+	}
+
+
+/* Loading Dialog Centered*/
+.loading
+{
+	height: 32px;
+	width: 32px;
+	margin: 5px auto 5px;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+
+/* Color Coding for Statuses*/
+.spanSuccessStyle
+{
+	text-align: center;
+	font-size: 14pt;
+	color: #3cb371;
+}
+
+.spanErrorStyle
+{
+	color: #396a9c;
+	padding-right: 10px;
+	text-align: right;
+}
+
+.numberStyle
+{
+	text-align: right;
+}
+
+
+/* No Record found CSS*/
+.LabelEmptyRows
+{ 
+	color: #0000C0;
+	font-weight: bold;
+	text-align: center;
+}
+
+.ParagraphStyle
+{
+	color: #999999;
+}
+
+/* Warning Message */
+.ParagraphStyleRed
+{
+	color: red;
+	border: solid 1px red;
+	padding: 4px;
+}
+/* Content Holder Style */
+.ContentHolderStyle
+{
+	width: 100%;
+	height: 100%;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.colonTDWidth
+{ width: 20px;
+	min-width: 20px; 
+	}
+
+
+.validatorStyle
+{ display:none ; 	
+	}
+	
+.EoDtpStyle table 
+{padding:0;
+	margin :0; 
+	
+	}	
+	
+.AspDGVStyle
+{   width:100% ;
+	max-width:500px; 
+	margin : 0 auto;
+	}	

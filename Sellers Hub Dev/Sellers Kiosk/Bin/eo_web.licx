@@ -1,0 +1,29 @@
+<license>
+    <licenseId>3206616000</licenseId>
+    <licensee></licensee>
+    <allow>
+        <add type="Menu" version="9.0" />
+        <add type="SlideMenu" version="9.0" />
+        <add type="TabStrip" version="9.0" />
+        <add type="TreeView" version="9.0" />
+        <add type="MultiPage" version="9.0" />
+        <add type="Calendar" version="9.0" />
+        <add type="Callback" version="9.0" />
+        <add type="AJAXUploader" version="9.0" />
+        <add type="Dialog" version="9.0" />
+        <add type="Splitter" version="9.0" />
+        <add type="MaskedEdit" version="9.0" />
+        <add type="Grid" version="9.0" />
+        <add type="ColorPicker" version="9.0" />
+        <add type="SpellChecker" version="9.0" />
+        <add type="Editor" version="9.0" />
+        <add type="ImageZoom" version="9.0" />
+        <add type="Downloader" version="9.0" />
+        <add type="Floater" version="9.0" />
+        <add type="Slide" version="9.0" />
+        <add type="Flyout" version="9.0" />
+        <add type="EditableLabel" version="9.0" />
+    </allow>
+    <orderInfo date="9/14/2010" version="8" />
+    <signature>JjCymD7lxT+V0I5X4h4YeQ==</signature>
+</license>

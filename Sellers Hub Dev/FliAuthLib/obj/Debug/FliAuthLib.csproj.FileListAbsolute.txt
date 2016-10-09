@@ -1,0 +1,11 @@
+D:\TMP\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll.config
+D:\TMP\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll
+D:\TMP\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.pdb
+D:\TMP\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.csprojResolveAssemblyReference.cache
+D:\TMP\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.dll
+D:\TMP\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.pdb
+E:\Software Development\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll.config
+E:\Software Development\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll
+E:\Software Development\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.pdb
+E:\Software Development\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.dll
+E:\Software Development\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.pdb

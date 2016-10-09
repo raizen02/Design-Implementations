@@ -1,0 +1,40 @@
+﻿/*        body, td, p, a{
+        margin:0;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size:11px;
+        color:#7F7F7F;
+        }
+
+
+
+*/
+
+/* CSS Document */
+@font-face {
+    font-family: 'Calibri';
+    src: url('font/calibri.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'CalibriIE';
+    src: url('font/calibri.eot');
+    font-weight: normal;
+}
+
+/*  Body    */
+html,body,form {
+	padding:0;
+	height:100%;
+    margin:0;
+    margin-left:0;
+    margin-top:0;
+    font-family: 'Calibri', 'CalibriIE';
+	background-repeat:no-repeat;
+	background-color: #0F468C
+}
+
+p {
+	margin:0;
+	padding:0;
+}

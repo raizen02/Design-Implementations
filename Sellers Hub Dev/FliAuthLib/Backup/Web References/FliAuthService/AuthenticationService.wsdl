@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://kiosk.filinvest.com.ph/SSO-DEV/services" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="https://kiosk.filinvest.com.ph/SSO-DEV/services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://kiosk.filinvest.com.ph/SSO-DEV/services">
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrComputerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrIpAddr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="tns:WebUser" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parseError" type="tns:ServiceError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SessionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLevel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoggedFromApp" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpiresOn" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerAllocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerSalesChannel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerClassification" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellerPosition" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ServiceError">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorNumber" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserByToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByTokenResult" type="tns:WebUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserLoggedIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserLoggedInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserLoggedInResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrRedirectId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateTokenAndRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrRequestId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateTokenAndRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateTokenAndRequestResult" type="tns:UserStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserStatus">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserLoggedIn" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestIdValid" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticateApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_parblnIsRemember" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateAppResult" type="tns:WebUserLogInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebUserLogInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:WebUser">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ErrorNumber" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="AuthenticateAppSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_parstrSessionId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="_parstrIsEncoded" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateAppSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateAppSessionResult" type="tns:WebUserLogInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebUser" nillable="true" type="tns:WebUser" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="UserStatus" nillable="true" type="tns:UserStatus" />
+      <s:element name="WebUserLogInfo" nillable="true" type="tns:WebUserLogInfo" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByToken" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserLoggedIn" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserLoggedInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidRequest" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateTokenAndRequest" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateTokenAndRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateApp" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthenticateAppSession" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateAppSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenHttpGetIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebUser" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInHttpGetIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestHttpGetIn">
+    <wsdl:part name="_parstrRedirectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestHttpGetIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+    <wsdl:part name="_parstrRequestId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:UserStatus" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppHttpGetIn">
+    <wsdl:part name="_parstrUserName" type="s:string" />
+    <wsdl:part name="_parstrPassword" type="s:string" />
+    <wsdl:part name="_parblnIsRemember" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebUserLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionHttpGetIn">
+    <wsdl:part name="_parstrSessionId" type="s:string" />
+    <wsdl:part name="_parstrIsEncoded" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebUserLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenHttpPostIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByTokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebUser" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInHttpPostIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsUserLoggedInHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestHttpPostIn">
+    <wsdl:part name="_parstrRedirectId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsValidRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestHttpPostIn">
+    <wsdl:part name="_parstrToken" type="s:string" />
+    <wsdl:part name="_parstrRequestId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateTokenAndRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:UserStatus" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppHttpPostIn">
+    <wsdl:part name="_parstrUserName" type="s:string" />
+    <wsdl:part name="_parstrPassword" type="s:string" />
+    <wsdl:part name="_parblnIsRemember" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebUserLogInfo" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionHttpPostIn">
+    <wsdl:part name="_parstrSessionId" type="s:string" />
+    <wsdl:part name="_parstrIsEncoded" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateAppSessionHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebUserLogInfo" />
+  </wsdl:message>
+  <wsdl:portType name="AuthenticationServiceSoap">
+    <wsdl:operation name="Authenticate">
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByToken">
+      <wsdl:input message="tns:GetUserByTokenSoapIn" />
+      <wsdl:output message="tns:GetUserByTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <wsdl:input message="tns:IsUserLoggedInSoapIn" />
+      <wsdl:output message="tns:IsUserLoggedInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <wsdl:input message="tns:IsValidRequestSoapIn" />
+      <wsdl:output message="tns:IsValidRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <wsdl:input message="tns:ValidateTokenAndRequestSoapIn" />
+      <wsdl:output message="tns:ValidateTokenAndRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <wsdl:input message="tns:AuthenticateAppSoapIn" />
+      <wsdl:output message="tns:AuthenticateAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <wsdl:input message="tns:AuthenticateAppSessionSoapIn" />
+      <wsdl:output message="tns:AuthenticateAppSessionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AuthenticationServiceHttpGet">
+    <wsdl:operation name="GetUserByToken">
+      <wsdl:input message="tns:GetUserByTokenHttpGetIn" />
+      <wsdl:output message="tns:GetUserByTokenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <wsdl:input message="tns:IsUserLoggedInHttpGetIn" />
+      <wsdl:output message="tns:IsUserLoggedInHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <wsdl:input message="tns:IsValidRequestHttpGetIn" />
+      <wsdl:output message="tns:IsValidRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <wsdl:input message="tns:ValidateTokenAndRequestHttpGetIn" />
+      <wsdl:output message="tns:ValidateTokenAndRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <wsdl:input message="tns:AuthenticateAppHttpGetIn" />
+      <wsdl:output message="tns:AuthenticateAppHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <wsdl:input message="tns:AuthenticateAppSessionHttpGetIn" />
+      <wsdl:output message="tns:AuthenticateAppSessionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AuthenticationServiceHttpPost">
+    <wsdl:operation name="GetUserByToken">
+      <wsdl:input message="tns:GetUserByTokenHttpPostIn" />
+      <wsdl:output message="tns:GetUserByTokenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <wsdl:input message="tns:IsUserLoggedInHttpPostIn" />
+      <wsdl:output message="tns:IsUserLoggedInHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <wsdl:input message="tns:IsValidRequestHttpPostIn" />
+      <wsdl:output message="tns:IsValidRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <wsdl:input message="tns:ValidateTokenAndRequestHttpPostIn" />
+      <wsdl:output message="tns:ValidateTokenAndRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <wsdl:input message="tns:AuthenticateAppHttpPostIn" />
+      <wsdl:output message="tns:AuthenticateAppHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <wsdl:input message="tns:AuthenticateAppSessionHttpPostIn" />
+      <wsdl:output message="tns:AuthenticateAppSessionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthenticationServiceSoap" type="tns:AuthenticationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByToken">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/GetUserByToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/IsUserLoggedIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/IsValidRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/ValidateTokenAndRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/AuthenticateApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <soap:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/AuthenticateAppSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthenticationServiceSoap12" type="tns:AuthenticationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByToken">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/GetUserByToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/IsUserLoggedIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/IsValidRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/ValidateTokenAndRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/AuthenticateApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <soap12:operation soapAction="https://kiosk.filinvest.com.ph/SSO-DEV/services/AuthenticateAppSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthenticationServiceHttpGet" type="tns:AuthenticationServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetUserByToken">
+      <http:operation location="/GetUserByToken" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <http:operation location="/IsUserLoggedIn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <http:operation location="/IsValidRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <http:operation location="/ValidateTokenAndRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <http:operation location="/AuthenticateApp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <http:operation location="/AuthenticateAppSession" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthenticationServiceHttpPost" type="tns:AuthenticationServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetUserByToken">
+      <http:operation location="/GetUserByToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUserLoggedIn">
+      <http:operation location="/IsUserLoggedIn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidRequest">
+      <http:operation location="/IsValidRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateTokenAndRequest">
+      <http:operation location="/ValidateTokenAndRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateApp">
+      <http:operation location="/AuthenticateApp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateAppSession">
+      <http:operation location="/AuthenticateAppSession" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthenticationService">
+    <wsdl:port name="AuthenticationServiceSoap" binding="tns:AuthenticationServiceSoap">
+      <soap:address location="https://kiosk.filinvest.com.ph/SSO-DEV/AuthenticationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthenticationServiceSoap12" binding="tns:AuthenticationServiceSoap12">
+      <soap12:address location="https://kiosk.filinvest.com.ph/SSO-DEV/AuthenticationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthenticationServiceHttpGet" binding="tns:AuthenticationServiceHttpGet">
+      <http:address location="https://kiosk.filinvest.com.ph/SSO-DEV/AuthenticationService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthenticationServiceHttpPost" binding="tns:AuthenticationServiceHttpPost">
+      <http:address location="https://kiosk.filinvest.com.ph/SSO-DEV/AuthenticationService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

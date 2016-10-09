@@ -1,0 +1,66 @@
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.Entities.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Core.Common.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\FluentValidation.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\EntityFramework.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.Entities.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Core.Common.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\FluentValidation.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\FluentValidation.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\Core.Common.Contracts.pdb
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\EntityFramework.xml
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\cs\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\da\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\de\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\es\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\fa\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\fi\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\fr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\it\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\ko\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\mk\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\nl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\pl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\pt\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\ru\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\sv\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\tr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.dll
+E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.csprojResolveAssemblyReference.cache
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\test.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Core.Common.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\FluentValidation.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Core.Common.Contracts.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\EntityFramework.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\test.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Core.Common.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\FluentValidation.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\FluentValidation.xml
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Core.Common.Contracts.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\EntityFramework.xml
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\cs\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\da\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\de\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\es\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\fa\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\fi\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\fr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\it\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\ko\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\mk\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\nl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\pl\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\pt\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\ru\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\sv\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\tr\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.pdb

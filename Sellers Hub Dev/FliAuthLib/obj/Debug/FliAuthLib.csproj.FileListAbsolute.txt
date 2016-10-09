@@ -9,3 +9,8 @@ E:\Software Development\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll
 E:\Software Development\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.pdb
 E:\Software Development\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.dll
 E:\Software Development\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll.config
+E:\Software Development\Design-Implementations\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\FliAuthLib\bin\Debug\FliAuthLib.pdb
+E:\Software Development\Design-Implementations\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\FliAuthLib\obj\Debug\FliAuthLib.pdb

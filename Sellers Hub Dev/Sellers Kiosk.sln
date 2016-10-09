@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sellers Kiosk", "Sellers Kiosk\", "{F4EE5DF5-0B23-4F5C-A230-2CF93E7672C4}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = ""
 		Debug.AspNetCompiler.VirtualPath = "/localhost_4566"
 		Debug.AspNetCompiler.PhysicalPath = "Sellers Kiosk\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4566\"

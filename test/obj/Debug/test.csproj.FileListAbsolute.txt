@@ -1,0 +1,4 @@
+E:\Software Development\Design-Implementations\test\bin\Debug\test.dll
+E:\Software Development\Design-Implementations\test\bin\Debug\test.pdb
+E:\Software Development\Design-Implementations\test\obj\Debug\test.dll
+E:\Software Development\Design-Implementations\test\obj\Debug\test.pdb

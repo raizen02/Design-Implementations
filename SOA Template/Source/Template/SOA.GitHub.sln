@@ -90,6 +90,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWeb", "SampleWeb\Samp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Seller.WebMVC", "Cti.Seller.WebMVC\Cti.Seller.WebMVC.csproj", "{FCF86E40-6105-4AD8-9E33-9E419BAFF0FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cti.Seller.Client.BusinessDomain", "Cti.Seller.Client.Business\Cti.Seller.Client.BusinessDomain.csproj", "{C9AC2D3C-4F2A-484F-BC63-918A339306BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -212,6 +214,10 @@ Global
 		{FCF86E40-6105-4AD8-9E33-9E419BAFF0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCF86E40-6105-4AD8-9E33-9E419BAFF0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCF86E40-6105-4AD8-9E33-9E419BAFF0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9AC2D3C-4F2A-484F-BC63-918A339306BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AC2D3C-4F2A-484F-BC63-918A339306BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AC2D3C-4F2A-484F-BC63-918A339306BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AC2D3C-4F2A-484F-BC63-918A339306BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -246,5 +252,6 @@ Global
 		{7EE6D065-86CB-4526-9F07-ADC490F9D22E} = {FAC3586D-B623-4C3D-815B-4E8EBC8AF0FC}
 		{E957F3FB-EA52-41A5-B1C2-A927970A175F} = {145F8229-87D9-45A1-8138-FDA0C94BAFD7}
 		{FCF86E40-6105-4AD8-9E33-9E419BAFF0FC} = {145F8229-87D9-45A1-8138-FDA0C94BAFD7}
+		{C9AC2D3C-4F2A-484F-BC63-918A339306BF} = {3E3F4DE1-8470-4344-A956-3641E11EB1EF}
 	EndGlobalSection
 EndGlobal

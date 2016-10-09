@@ -31,7 +31,6 @@ E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.
 E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.csprojResolveAssemblyReference.cache
 E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.dll
 E:\Software Development\Design-Implementations\SOA Template\Source\Template\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.pdb
-E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.csprojResolveAssemblyReference.cache
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.dll
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\Cti.Seller.Client.BusinessDomain.pdb
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\test.dll
@@ -62,5 +61,6 @@ E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\sv\FluentValidation.resources.dll
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\tr\FluentValidation.resources.dll
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\bin\Debug\zh-CN\FluentValidation.resources.dll
+E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.csprojResolveAssemblyReference.cache
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.dll
 E:\Software Development\Design-Implementations\Sellers Hub Dev\Cti.Seller.Client.Business\obj\Debug\Cti.Seller.Client.BusinessDomain.pdb
